@@ -1,0 +1,797 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE0947A2234241FB00AAFE70 /* CreateNewListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0947A1234241FB00AAFE70 /* CreateNewListStoryboard.storyboard */; };
+		CE0947A42342423500AAFE70 /* CreateNewListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0947A32342423500AAFE70 /* CreateNewListController.swift */; };
+		CE0947A623424E3200AAFE70 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0947A523424E3200AAFE70 /* AlertService.swift */; };
+		CE145DA123410BCB0032C97C /* ListOfFavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE145DA023410BCB0032C97C /* ListOfFavoritesController.swift */; };
+		CE145DA323410DF30032C97C /* ListOfFavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE145DA223410DF30032C97C /* ListOfFavoritesCell.swift */; };
+		CE145DA7234153EE0032C97C /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE145DA6234153EE0032C97C /* SettingsController.swift */; };
+		CE145DA923415CC60032C97C /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE145DA823415CC60032C97C /* Toast.swift */; };
+		CE3988D3231E69EE006EC963 /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3988D2231E69EE006EC963 /* SettingsService.swift */; };
+		CE3AC838231C34C700DC577E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3AC837231C34C700DC577E /* libsqlite3.tbd */; };
+		CE3AC83B231C3D0300DC577E /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC839231C357F00DC577E /* DatabaseManager.swift */; };
+		CE3AC84B231C40CD00DC577E /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC840231C40CD00DC577E /* FMDatabase.m */; };
+		CE3AC84C231C40CD00DC577E /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC842231C40CD00DC577E /* FMDatabaseQueue.m */; };
+		CE3AC84D231C40CD00DC577E /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC844231C40CD00DC577E /* FMResultSet.m */; };
+		CE3AC84E231C40CD00DC577E /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC847231C40CD00DC577E /* FMDatabasePool.m */; };
+		CE3AC84F231C40CD00DC577E /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC84A231C40CD00DC577E /* FMDatabaseAdditions.m */; };
+		CE3C9C11233159B6006D02E8 /* baza.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = CE3C9C0F23315994006D02E8 /* baza.sqlite */; };
+		CE3C9C13233159D5006D02E8 /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C9C12233159D5006D02E8 /* DataBaseHelper.swift */; };
+		CE3C9C1523315B2A006D02E8 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C9C1423315B2A006D02E8 /* SearchController.swift */; };
+		CE3C9C1723337CC0006D02E8 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C9C1623337CC0006D02E8 /* SearchTableViewCell.swift */; };
+		CE7294422323D2110054A03B /* DatabaseFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7294412323D2110054A03B /* DatabaseFavorites.swift */; };
+		CE9620632343D93800469796 /* DisplayFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9620622343D93800469796 /* DisplayFavorite.swift */; };
+		CE9620652343DD6700469796 /* DisplayFavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9620642343DD6700469796 /* DisplayFavoriteCell.swift */; };
+		CEC8D17123199B8400247D86 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8D17023199B8400247D86 /* ListController.swift */; };
+		CEC8D1732319B66800247D86 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8D1722319B66800247D86 /* Game.swift */; };
+		CEDFBDC1231299A50031B5EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDFBDC0231299A50031B5EE /* AppDelegate.swift */; };
+		CEDFBDC3231299A50031B5EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDFBDC2231299A50031B5EE /* ViewController.swift */; };
+		CEDFBDC6231299A50031B5EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDFBDC4231299A50031B5EE /* Main.storyboard */; };
+		CEDFBDC8231299A50031B5EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDFBDC7231299A50031B5EE /* Assets.xcassets */; };
+		CEDFBDCB231299A50031B5EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDFBDC9231299A50031B5EE /* LaunchScreen.storyboard */; };
+		CEDFBDD6231299A50031B5EE /* Radosne_Wieczorki_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDFBDD5231299A50031B5EE /* Radosne_Wieczorki_iOSTests.swift */; };
+		CEDFBDE1231299A50031B5EE /* Radosne_Wieczorki_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDFBDE0231299A50031B5EE /* Radosne_Wieczorki_iOSUITests.swift */; };
+		CEE6ED4D24E8413200B780E9 /* LauchScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE6ED4C24E8413200B780E9 /* LauchScreenController.swift */; };
+		CEE6ED4F24E8755700B780E9 /* tło_lauch_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE6ED4E24E8755700B780E9 /* tło_lauch_screen.png */; };
+		CEE6ED5224E8795300B780E9 /* tło_lauch_screen2.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE6ED5124E8795200B780E9 /* tło_lauch_screen2.png */; };
+		CEE6ED5424E87AEB00B780E9 /* integracja.svg in Resources */ = {isa = PBXBuildFile; fileRef = CEE6ED5324E87AEB00B780E9 /* integracja.svg */; };
+		CEE6ED5624E88B3C00B780E9 /* tło_lauch_screen3.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE6ED5524E88B3C00B780E9 /* tło_lauch_screen3.png */; };
+		CEFC4D342353BE3500796F58 /* AddToFavoritesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFC4D332353BE3500796F58 /* AddToFavoritesStoryboard.storyboard */; };
+		CEFC4D36235629AF00796F58 /* AddToFavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4D35235629AF00796F58 /* AddToFavoritesController.swift */; };
+		CEFC4D3823562E1800796F58 /* DeleteStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFC4D3723562E1800796F58 /* DeleteStoryboard.storyboard */; };
+		CEFC4D3A2356303F00796F58 /* DeleteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4D392356303F00796F58 /* DeleteController.swift */; };
+		CEFC9B2D231A6CC10073C344 /* DisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC9B2C231A6CC10073C344 /* DisplayController.swift */; };
+		CEFC9B2F231A6DA00073C344 /* GamesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC9B2E231A6DA00073C344 /* GamesArray.swift */; };
+		CEFC9B33231A89C60073C344 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC9B32231A89C60073C344 /* ListTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEDFBDD2231299A50031B5EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEDFBDB5231299A50031B5EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEDFBDBC231299A50031B5EE;
+			remoteInfo = "Radosne Wieczorki iOS";
+		};
+		CEDFBDDD231299A50031B5EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEDFBDB5231299A50031B5EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEDFBDBC231299A50031B5EE;
+			remoteInfo = "Radosne Wieczorki iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE0947A1234241FB00AAFE70 /* CreateNewListStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateNewListStoryboard.storyboard; sourceTree = "<group>"; };
+		CE0947A32342423500AAFE70 /* CreateNewListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewListController.swift; sourceTree = "<group>"; };
+		CE0947A523424E3200AAFE70 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		CE145DA023410BCB0032C97C /* ListOfFavoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfFavoritesController.swift; sourceTree = "<group>"; };
+		CE145DA223410DF30032C97C /* ListOfFavoritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfFavoritesCell.swift; sourceTree = "<group>"; };
+		CE145DA6234153EE0032C97C /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		CE145DA823415CC60032C97C /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		CE3988D2231E69EE006EC963 /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
+		CE3AC837231C34C700DC577E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		CE3AC839231C357F00DC577E /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		CE3AC83F231C40CC00DC577E /* Radosne Wieczorki iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Radosne Wieczorki iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		CE3AC840231C40CD00DC577E /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMDatabase.m"; sourceTree = "<group>"; };
+		CE3AC841231C40CD00DC577E /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMDatabaseQueue.h"; sourceTree = "<group>"; };
+		CE3AC842231C40CD00DC577E /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMDatabaseQueue.m"; sourceTree = "<group>"; };
+		CE3AC843231C40CD00DC577E /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMDB.h"; sourceTree = "<group>"; };
+		CE3AC844231C40CD00DC577E /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMResultSet.m"; sourceTree = "<group>"; };
+		CE3AC845231C40CD00DC577E /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMDatabasePool.h"; sourceTree = "<group>"; };
+		CE3AC846231C40CD00DC577E /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMResultSet.h"; sourceTree = "<group>"; };
+		CE3AC847231C40CD00DC577E /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMDatabasePool.m"; sourceTree = "<group>"; };
+		CE3AC848231C40CD00DC577E /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMDatabaseAdditions.h"; sourceTree = "<group>"; };
+		CE3AC849231C40CD00DC577E /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMDatabase.h"; sourceTree = "<group>"; };
+		CE3AC84A231C40CD00DC577E /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMDatabaseAdditions.m"; sourceTree = "<group>"; };
+		CE3C9C0F23315994006D02E8 /* baza.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = baza.sqlite; sourceTree = "<group>"; };
+		CE3C9C12233159D5006D02E8 /* DataBaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseHelper.swift; sourceTree = "<group>"; };
+		CE3C9C1423315B2A006D02E8 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		CE3C9C1623337CC0006D02E8 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		CE7294412323D2110054A03B /* DatabaseFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseFavorites.swift; sourceTree = "<group>"; };
+		CE9620622343D93800469796 /* DisplayFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayFavorite.swift; sourceTree = "<group>"; };
+		CE9620642343DD6700469796 /* DisplayFavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayFavoriteCell.swift; sourceTree = "<group>"; };
+		CEC8D17023199B8400247D86 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		CEC8D1722319B66800247D86 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		CEDFBDBD231299A50031B5EE /* Radosne Wieczorki iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Radosne Wieczorki iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDFBDC0231299A50031B5EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CEDFBDC2231299A50031B5EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEDFBDC5231299A50031B5EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEDFBDC7231299A50031B5EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEDFBDCA231299A50031B5EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEDFBDCC231299A50031B5EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDFBDD1231299A50031B5EE /* Radosne Wieczorki iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Radosne Wieczorki iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDFBDD5231299A50031B5EE /* Radosne_Wieczorki_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radosne_Wieczorki_iOSTests.swift; sourceTree = "<group>"; };
+		CEDFBDD7231299A50031B5EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDFBDDC231299A50031B5EE /* Radosne Wieczorki iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Radosne Wieczorki iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDFBDE0231299A50031B5EE /* Radosne_Wieczorki_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radosne_Wieczorki_iOSUITests.swift; sourceTree = "<group>"; };
+		CEDFBDE2231299A50031B5EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEE6ED4C24E8413200B780E9 /* LauchScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchScreenController.swift; sourceTree = "<group>"; };
+		CEE6ED4E24E8755700B780E9 /* tło_lauch_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tło_lauch_screen.png"; sourceTree = "<group>"; };
+		CEE6ED5124E8795200B780E9 /* tło_lauch_screen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tło_lauch_screen2.png"; sourceTree = "<group>"; };
+		CEE6ED5324E87AEB00B780E9 /* integracja.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = integracja.svg; sourceTree = "<group>"; };
+		CEE6ED5524E88B3C00B780E9 /* tło_lauch_screen3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tło_lauch_screen3.png"; sourceTree = "<group>"; };
+		CEFC4D332353BE3500796F58 /* AddToFavoritesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddToFavoritesStoryboard.storyboard; sourceTree = "<group>"; };
+		CEFC4D35235629AF00796F58 /* AddToFavoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToFavoritesController.swift; sourceTree = "<group>"; };
+		CEFC4D3723562E1800796F58 /* DeleteStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeleteStoryboard.storyboard; sourceTree = "<group>"; };
+		CEFC4D392356303F00796F58 /* DeleteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteController.swift; sourceTree = "<group>"; };
+		CEFC9B2C231A6CC10073C344 /* DisplayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayController.swift; sourceTree = "<group>"; };
+		CEFC9B2E231A6DA00073C344 /* GamesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesArray.swift; sourceTree = "<group>"; };
+		CEFC9B32231A89C60073C344 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEDFBDBA231299A50031B5EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE3AC838231C34C700DC577E /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDFBDCE231299A50031B5EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDFBDD9231299A50031B5EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE0947A0234241C900AAFE70 /* Dialogs */ = {
+			isa = PBXGroup;
+			children = (
+				CE0947A1234241FB00AAFE70 /* CreateNewListStoryboard.storyboard */,
+				CE0947A32342423500AAFE70 /* CreateNewListController.swift */,
+				CE0947A523424E3200AAFE70 /* AlertService.swift */,
+				CEFC4D332353BE3500796F58 /* AddToFavoritesStoryboard.storyboard */,
+				CEFC4D35235629AF00796F58 /* AddToFavoritesController.swift */,
+				CEFC4D3723562E1800796F58 /* DeleteStoryboard.storyboard */,
+				CEFC4D392356303F00796F58 /* DeleteController.swift */,
+			);
+			path = Dialogs;
+			sourceTree = "<group>";
+		};
+		CE145DA4234153600032C97C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEDFBDC2231299A50031B5EE /* ViewController.swift */,
+				CEFC9B2C231A6CC10073C344 /* DisplayController.swift */,
+				CE3C9C1423315B2A006D02E8 /* SearchController.swift */,
+				CEC8D17023199B8400247D86 /* ListController.swift */,
+				CE145DA023410BCB0032C97C /* ListOfFavoritesController.swift */,
+				CE145DA6234153EE0032C97C /* SettingsController.swift */,
+				CE9620622343D93800469796 /* DisplayFavorite.swift */,
+				CEE6ED4C24E8413200B780E9 /* LauchScreenController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CE145DA5234153A50032C97C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE3C9C1623337CC0006D02E8 /* SearchTableViewCell.swift */,
+				CE145DA223410DF30032C97C /* ListOfFavoritesCell.swift */,
+				CEFC9B32231A89C60073C344 /* ListTableViewCell.swift */,
+				CE9620642343DD6700469796 /* DisplayFavoriteCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CE3AC836231C34C700DC577E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE3AC837231C34C700DC577E /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE3AC83C231C3DE200DC577E /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				CE3AC849231C40CD00DC577E /* FMDatabase.h */,
+				CE3AC840231C40CD00DC577E /* FMDatabase.m */,
+				CE3AC848231C40CD00DC577E /* FMDatabaseAdditions.h */,
+				CE3AC84A231C40CD00DC577E /* FMDatabaseAdditions.m */,
+				CE3AC845231C40CD00DC577E /* FMDatabasePool.h */,
+				CE3AC847231C40CD00DC577E /* FMDatabasePool.m */,
+				CE3AC841231C40CD00DC577E /* FMDatabaseQueue.h */,
+				CE3AC842231C40CD00DC577E /* FMDatabaseQueue.m */,
+				CE3AC843231C40CD00DC577E /* FMDB.h */,
+				CE3AC846231C40CD00DC577E /* FMResultSet.h */,
+				CE3AC844231C40CD00DC577E /* FMResultSet.m */,
+				CE3AC83F231C40CC00DC577E /* Radosne Wieczorki iOS-Bridging-Header.h */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		CEDFBDB4231299A50031B5EE = {
+			isa = PBXGroup;
+			children = (
+				CEE6ED5024E8756000B780E9 /* resources */,
+				CEDFBDBF231299A50031B5EE /* Radosne Wieczorki iOS */,
+				CEDFBDD4231299A50031B5EE /* Radosne Wieczorki iOSTests */,
+				CEDFBDDF231299A50031B5EE /* Radosne Wieczorki iOSUITests */,
+				CEDFBDBE231299A50031B5EE /* Products */,
+				CE3AC836231C34C700DC577E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CEDFBDBE231299A50031B5EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEDFBDBD231299A50031B5EE /* Radosne Wieczorki iOS.app */,
+				CEDFBDD1231299A50031B5EE /* Radosne Wieczorki iOSTests.xctest */,
+				CEDFBDDC231299A50031B5EE /* Radosne Wieczorki iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEDFBDBF231299A50031B5EE /* Radosne Wieczorki iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CE0947A0234241C900AAFE70 /* Dialogs */,
+				CE145DA5234153A50032C97C /* Cells */,
+				CE145DA4234153600032C97C /* Controllers */,
+				CE3C9C0F23315994006D02E8 /* baza.sqlite */,
+				CEDFBDC0231299A50031B5EE /* AppDelegate.swift */,
+				CEDFBDC4231299A50031B5EE /* Main.storyboard */,
+				CEDFBDC7231299A50031B5EE /* Assets.xcassets */,
+				CEDFBDC9231299A50031B5EE /* LaunchScreen.storyboard */,
+				CEDFBDCC231299A50031B5EE /* Info.plist */,
+				CEC8D1722319B66800247D86 /* Game.swift */,
+				CEFC9B2E231A6DA00073C344 /* GamesArray.swift */,
+				CE3AC839231C357F00DC577E /* DatabaseManager.swift */,
+				CE3AC83C231C3DE200DC577E /* FMDB */,
+				CE3988D2231E69EE006EC963 /* SettingsService.swift */,
+				CE7294412323D2110054A03B /* DatabaseFavorites.swift */,
+				CE3C9C12233159D5006D02E8 /* DataBaseHelper.swift */,
+				CE145DA823415CC60032C97C /* Toast.swift */,
+			);
+			path = "Radosne Wieczorki iOS";
+			sourceTree = "<group>";
+		};
+		CEDFBDD4231299A50031B5EE /* Radosne Wieczorki iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEDFBDD5231299A50031B5EE /* Radosne_Wieczorki_iOSTests.swift */,
+				CEDFBDD7231299A50031B5EE /* Info.plist */,
+			);
+			path = "Radosne Wieczorki iOSTests";
+			sourceTree = "<group>";
+		};
+		CEDFBDDF231299A50031B5EE /* Radosne Wieczorki iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CEDFBDE0231299A50031B5EE /* Radosne_Wieczorki_iOSUITests.swift */,
+				CEDFBDE2231299A50031B5EE /* Info.plist */,
+			);
+			path = "Radosne Wieczorki iOSUITests";
+			sourceTree = "<group>";
+		};
+		CEE6ED5024E8756000B780E9 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				CEE6ED5524E88B3C00B780E9 /* tło_lauch_screen3.png */,
+				CEE6ED5324E87AEB00B780E9 /* integracja.svg */,
+				CEE6ED5124E8795200B780E9 /* tło_lauch_screen2.png */,
+				CEE6ED4E24E8755700B780E9 /* tło_lauch_screen.png */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEDFBDBC231299A50031B5EE /* Radosne Wieczorki iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDFBDE5231299A50031B5EE /* Build configuration list for PBXNativeTarget "Radosne Wieczorki iOS" */;
+			buildPhases = (
+				CEDFBDB9231299A50031B5EE /* Sources */,
+				CEDFBDBA231299A50031B5EE /* Frameworks */,
+				CEDFBDBB231299A50031B5EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Radosne Wieczorki iOS";
+			productName = "Radosne Wieczorki iOS";
+			productReference = CEDFBDBD231299A50031B5EE /* Radosne Wieczorki iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEDFBDD0231299A50031B5EE /* Radosne Wieczorki iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDFBDE8231299A50031B5EE /* Build configuration list for PBXNativeTarget "Radosne Wieczorki iOSTests" */;
+			buildPhases = (
+				CEDFBDCD231299A50031B5EE /* Sources */,
+				CEDFBDCE231299A50031B5EE /* Frameworks */,
+				CEDFBDCF231299A50031B5EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEDFBDD3231299A50031B5EE /* PBXTargetDependency */,
+			);
+			name = "Radosne Wieczorki iOSTests";
+			productName = "Radosne Wieczorki iOSTests";
+			productReference = CEDFBDD1231299A50031B5EE /* Radosne Wieczorki iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEDFBDDB231299A50031B5EE /* Radosne Wieczorki iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDFBDEB231299A50031B5EE /* Build configuration list for PBXNativeTarget "Radosne Wieczorki iOSUITests" */;
+			buildPhases = (
+				CEDFBDD8231299A50031B5EE /* Sources */,
+				CEDFBDD9231299A50031B5EE /* Frameworks */,
+				CEDFBDDA231299A50031B5EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEDFBDDE231299A50031B5EE /* PBXTargetDependency */,
+			);
+			name = "Radosne Wieczorki iOSUITests";
+			productName = "Radosne Wieczorki iOSUITests";
+			productReference = CEDFBDDC231299A50031B5EE /* Radosne Wieczorki iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEDFBDB5231299A50031B5EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = tomsloj;
+				TargetAttributes = {
+					CEDFBDBC231299A50031B5EE = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+					};
+					CEDFBDD0231299A50031B5EE = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = CEDFBDBC231299A50031B5EE;
+					};
+					CEDFBDDB231299A50031B5EE = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = CEDFBDBC231299A50031B5EE;
+					};
+				};
+			};
+			buildConfigurationList = CEDFBDB8231299A50031B5EE /* Build configuration list for PBXProject "Radosne Wieczorki iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEDFBDB4231299A50031B5EE;
+			productRefGroup = CEDFBDBE231299A50031B5EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEDFBDBC231299A50031B5EE /* Radosne Wieczorki iOS */,
+				CEDFBDD0231299A50031B5EE /* Radosne Wieczorki iOSTests */,
+				CEDFBDDB231299A50031B5EE /* Radosne Wieczorki iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEDFBDBB231299A50031B5EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEFC4D3823562E1800796F58 /* DeleteStoryboard.storyboard in Resources */,
+				CEE6ED5224E8795300B780E9 /* tło_lauch_screen2.png in Resources */,
+				CEFC4D342353BE3500796F58 /* AddToFavoritesStoryboard.storyboard in Resources */,
+				CEDFBDCB231299A50031B5EE /* LaunchScreen.storyboard in Resources */,
+				CEE6ED5624E88B3C00B780E9 /* tło_lauch_screen3.png in Resources */,
+				CE3C9C11233159B6006D02E8 /* baza.sqlite in Resources */,
+				CEDFBDC8231299A50031B5EE /* Assets.xcassets in Resources */,
+				CEE6ED5424E87AEB00B780E9 /* integracja.svg in Resources */,
+				CE0947A2234241FB00AAFE70 /* CreateNewListStoryboard.storyboard in Resources */,
+				CEDFBDC6231299A50031B5EE /* Main.storyboard in Resources */,
+				CEE6ED4F24E8755700B780E9 /* tło_lauch_screen.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDFBDCF231299A50031B5EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDFBDDA231299A50031B5EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEDFBDB9231299A50031B5EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9620652343DD6700469796 /* DisplayFavoriteCell.swift in Sources */,
+				CE145DA123410BCB0032C97C /* ListOfFavoritesController.swift in Sources */,
+				CE3AC83B231C3D0300DC577E /* DatabaseManager.swift in Sources */,
+				CEE6ED4D24E8413200B780E9 /* LauchScreenController.swift in Sources */,
+				CEFC4D36235629AF00796F58 /* AddToFavoritesController.swift in Sources */,
+				CE3AC84E231C40CD00DC577E /* FMDatabasePool.m in Sources */,
+				CE145DA7234153EE0032C97C /* SettingsController.swift in Sources */,
+				CEFC9B33231A89C60073C344 /* ListTableViewCell.swift in Sources */,
+				CEFC9B2D231A6CC10073C344 /* DisplayController.swift in Sources */,
+				CEFC4D3A2356303F00796F58 /* DeleteController.swift in Sources */,
+				CE3C9C13233159D5006D02E8 /* DataBaseHelper.swift in Sources */,
+				CE0947A42342423500AAFE70 /* CreateNewListController.swift in Sources */,
+				CE9620632343D93800469796 /* DisplayFavorite.swift in Sources */,
+				CE3AC84B231C40CD00DC577E /* FMDatabase.m in Sources */,
+				CEDFBDC3231299A50031B5EE /* ViewController.swift in Sources */,
+				CE7294422323D2110054A03B /* DatabaseFavorites.swift in Sources */,
+				CE3AC84C231C40CD00DC577E /* FMDatabaseQueue.m in Sources */,
+				CE3C9C1723337CC0006D02E8 /* SearchTableViewCell.swift in Sources */,
+				CEDFBDC1231299A50031B5EE /* AppDelegate.swift in Sources */,
+				CE145DA323410DF30032C97C /* ListOfFavoritesCell.swift in Sources */,
+				CE3C9C1523315B2A006D02E8 /* SearchController.swift in Sources */,
+				CE3AC84F231C40CD00DC577E /* FMDatabaseAdditions.m in Sources */,
+				CEFC9B2F231A6DA00073C344 /* GamesArray.swift in Sources */,
+				CE3AC84D231C40CD00DC577E /* FMResultSet.m in Sources */,
+				CEC8D17123199B8400247D86 /* ListController.swift in Sources */,
+				CE145DA923415CC60032C97C /* Toast.swift in Sources */,
+				CE3988D3231E69EE006EC963 /* SettingsService.swift in Sources */,
+				CE0947A623424E3200AAFE70 /* AlertService.swift in Sources */,
+				CEC8D1732319B66800247D86 /* Game.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDFBDCD231299A50031B5EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDFBDD6231299A50031B5EE /* Radosne_Wieczorki_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDFBDD8231299A50031B5EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDFBDE1231299A50031B5EE /* Radosne_Wieczorki_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEDFBDD3231299A50031B5EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEDFBDBC231299A50031B5EE /* Radosne Wieczorki iOS */;
+			targetProxy = CEDFBDD2231299A50031B5EE /* PBXContainerItemProxy */;
+		};
+		CEDFBDDE231299A50031B5EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEDFBDBC231299A50031B5EE /* Radosne Wieczorki iOS */;
+			targetProxy = CEDFBDDD231299A50031B5EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CEDFBDC4231299A50031B5EE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEDFBDC5231299A50031B5EE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEDFBDC9231299A50031B5EE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEDFBDCA231299A50031B5EE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEDFBDE3231299A50031B5EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEDFBDE4231299A50031B5EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEDFBDE6231299A50031B5EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Radosne Wieczorki iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tomsloj.Radosne-Wieczorki-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Radosne Wieczorki iOS/FMDB/Radosne Wieczorki iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEDFBDE7231299A50031B5EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Radosne Wieczorki iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tomsloj.Radosne-Wieczorki-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Radosne Wieczorki iOS/FMDB/Radosne Wieczorki iOS-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CEDFBDE9231299A50031B5EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Radosne Wieczorki iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tomsloj.Radosne-Wieczorki-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Radosne Wieczorki iOS.app/Radosne Wieczorki iOS";
+			};
+			name = Debug;
+		};
+		CEDFBDEA231299A50031B5EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Radosne Wieczorki iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tomsloj.Radosne-Wieczorki-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Radosne Wieczorki iOS.app/Radosne Wieczorki iOS";
+			};
+			name = Release;
+		};
+		CEDFBDEC231299A50031B5EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Radosne Wieczorki iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tomsloj.Radosne-Wieczorki-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Radosne Wieczorki iOS";
+			};
+			name = Debug;
+		};
+		CEDFBDED231299A50031B5EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Radosne Wieczorki iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tomsloj.Radosne-Wieczorki-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Radosne Wieczorki iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEDFBDB8231299A50031B5EE /* Build configuration list for PBXProject "Radosne Wieczorki iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDFBDE3231299A50031B5EE /* Debug */,
+				CEDFBDE4231299A50031B5EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDFBDE5231299A50031B5EE /* Build configuration list for PBXNativeTarget "Radosne Wieczorki iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDFBDE6231299A50031B5EE /* Debug */,
+				CEDFBDE7231299A50031B5EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDFBDE8231299A50031B5EE /* Build configuration list for PBXNativeTarget "Radosne Wieczorki iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDFBDE9231299A50031B5EE /* Debug */,
+				CEDFBDEA231299A50031B5EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDFBDEB231299A50031B5EE /* Build configuration list for PBXNativeTarget "Radosne Wieczorki iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDFBDEC231299A50031B5EE /* Debug */,
+				CEDFBDED231299A50031B5EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEDFBDB5231299A50031B5EE /* Project object */;
+}
