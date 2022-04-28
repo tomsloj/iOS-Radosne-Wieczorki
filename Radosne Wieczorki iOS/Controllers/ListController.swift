@@ -11,7 +11,9 @@ import UIKit
 class ListController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var txt:String = ""
+    var fontSize:CGFloat!
     var toSend:String!
+    let sService:SettingsService = SettingsService()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,6 +25,17 @@ class ListController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.dataSource = self
         tableView.delegate = self
         
+        fontSize = CGFloat(sService.getTextSize())
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
+        if(fontSize != CGFloat(sService.getTextSize()))
+        {
+            fontSize = CGFloat(sService.getTextSize())
+            tableView.reloadData()
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -77,6 +90,7 @@ class ListController: UIViewController, UITableViewDataSource, UITableViewDelega
         let text = gamesArray[indexPath.row]
         
         cell.nameLabel.text = text
+        cell.nameLabel.font = cell.nameLabel.font.withSize(fontSize-1.0)
         
         return cell
     }

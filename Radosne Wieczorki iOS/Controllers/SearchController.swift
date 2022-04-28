@@ -17,7 +17,14 @@ class SearchController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var findInTitleLabel: UILabel!
+    @IBOutlet weak var findInDescriptionLabel: UILabel!
+    @IBOutlet weak var findButton: UIButton!
+    
     var list:[String] = []
+    
+    var fontSize:CGFloat!
+    let sService:SettingsService = SettingsService()
     
     override func viewDidLoad()
     {
@@ -28,8 +35,22 @@ class SearchController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        
-        
+        fontSize = CGFloat(sService.getTextSize())
+        findInTitleLabel.font = findInTitleLabel.font.withSize(fontSize)
+        findInDescriptionLabel.font = findInDescriptionLabel.font.withSize(fontSize)
+        findButton.titleLabel?.font = findButton.titleLabel?.font.withSize(fontSize+3.0)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
+        if(fontSize != CGFloat(sService.getTextSize()))
+        {
+            fontSize = CGFloat(sService.getTextSize())
+            tableView.reloadData()
+            findInTitleLabel.font = findInTitleLabel.font.withSize(fontSize)
+            findInDescriptionLabel.font = findInDescriptionLabel.font.withSize(fontSize)
+            findButton.titleLabel?.font = findButton.titleLabel?.font.withSize(fontSize+3.0)
+        }
     }
     
     @IBAction func searchButtonClicked(_ sender: UIButton)
@@ -68,9 +89,6 @@ class SearchController: UIViewController {
         self.tableView.reloadData()
     }
     
-    
-    
-    
 }
 
 extension SearchController: UITableViewDataSource, UITableViewDelegate
@@ -107,6 +125,7 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate
         let text = list[indexPath.row]
         
         cell.setCell(game: text)
+        cell.nameLabel.font = cell.nameLabel.font.withSize(fontSize)
         
         return cell
     }

@@ -17,11 +17,6 @@
 		CE3988D3231E69EE006EC963 /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3988D2231E69EE006EC963 /* SettingsService.swift */; };
 		CE3AC838231C34C700DC577E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3AC837231C34C700DC577E /* libsqlite3.tbd */; };
 		CE3AC83B231C3D0300DC577E /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC839231C357F00DC577E /* DatabaseManager.swift */; };
-		CE3AC84B231C40CD00DC577E /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC840231C40CD00DC577E /* FMDatabase.m */; };
-		CE3AC84C231C40CD00DC577E /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC842231C40CD00DC577E /* FMDatabaseQueue.m */; };
-		CE3AC84D231C40CD00DC577E /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC844231C40CD00DC577E /* FMResultSet.m */; };
-		CE3AC84E231C40CD00DC577E /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC847231C40CD00DC577E /* FMDatabasePool.m */; };
-		CE3AC84F231C40CD00DC577E /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC84A231C40CD00DC577E /* FMDatabaseAdditions.m */; };
 		CE3C9C11233159B6006D02E8 /* baza.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = CE3C9C0F23315994006D02E8 /* baza.sqlite */; };
 		CE3C9C13233159D5006D02E8 /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C9C12233159D5006D02E8 /* DataBaseHelper.swift */; };
 		CE3C9C1523315B2A006D02E8 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C9C1423315B2A006D02E8 /* SearchController.swift */; };
@@ -31,6 +26,11 @@
 		CE9620652343DD6700469796 /* DisplayFavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9620642343DD6700469796 /* DisplayFavoriteCell.swift */; };
 		CEC8D17123199B8400247D86 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8D17023199B8400247D86 /* ListController.swift */; };
 		CEC8D1732319B66800247D86 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8D1722319B66800247D86 /* Game.swift */; };
+		CED202E127F5F8E00000D005 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CED202D827F5F8E00000D005 /* FMDatabaseAdditions.m */; };
+		CED202E227F5F8E00000D005 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = CED202D927F5F8E00000D005 /* FMDatabasePool.m */; };
+		CED202E327F5F8E00000D005 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CED202DD27F5F8E00000D005 /* FMDatabase.m */; };
+		CED202E427F5F8E00000D005 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CED202DF27F5F8E00000D005 /* FMResultSet.m */; };
+		CED202E527F5F8E00000D005 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CED202E027F5F8E00000D005 /* FMDatabaseQueue.m */; };
 		CEDFBDC1231299A50031B5EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDFBDC0231299A50031B5EE /* AppDelegate.swift */; };
 		CEDFBDC3231299A50031B5EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDFBDC2231299A50031B5EE /* ViewController.swift */; };
 		CEDFBDC6231299A50031B5EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDFBDC4231299A50031B5EE /* Main.storyboard */; };
@@ -81,17 +81,6 @@
 		CE3AC837231C34C700DC577E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		CE3AC839231C357F00DC577E /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		CE3AC83F231C40CC00DC577E /* Radosne Wieczorki iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Radosne Wieczorki iOS-Bridging-Header.h"; sourceTree = "<group>"; };
-		CE3AC840231C40CD00DC577E /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMDatabase.m"; sourceTree = "<group>"; };
-		CE3AC841231C40CD00DC577E /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMDatabaseQueue.h"; sourceTree = "<group>"; };
-		CE3AC842231C40CD00DC577E /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMDatabaseQueue.m"; sourceTree = "<group>"; };
-		CE3AC843231C40CD00DC577E /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMDB.h"; sourceTree = "<group>"; };
-		CE3AC844231C40CD00DC577E /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMResultSet.m"; sourceTree = "<group>"; };
-		CE3AC845231C40CD00DC577E /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMDatabasePool.h"; sourceTree = "<group>"; };
-		CE3AC846231C40CD00DC577E /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMResultSet.h"; sourceTree = "<group>"; };
-		CE3AC847231C40CD00DC577E /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMDatabasePool.m"; sourceTree = "<group>"; };
-		CE3AC848231C40CD00DC577E /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMDatabaseAdditions.h"; sourceTree = "<group>"; };
-		CE3AC849231C40CD00DC577E /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMDatabase.h"; sourceTree = "<group>"; };
-		CE3AC84A231C40CD00DC577E /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = "../../../../../../Downloads/fmdb-master/src/fmdb/FMDatabaseAdditions.m"; sourceTree = "<group>"; };
 		CE3C9C0F23315994006D02E8 /* baza.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = baza.sqlite; sourceTree = "<group>"; };
 		CE3C9C12233159D5006D02E8 /* DataBaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseHelper.swift; sourceTree = "<group>"; };
 		CE3C9C1423315B2A006D02E8 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
@@ -101,6 +90,17 @@
 		CE9620642343DD6700469796 /* DisplayFavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayFavoriteCell.swift; sourceTree = "<group>"; };
 		CEC8D17023199B8400247D86 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		CEC8D1722319B66800247D86 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		CED202D627F5F8D10000D005 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		CED202D727F5F8E00000D005 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		CED202D827F5F8E00000D005 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		CED202D927F5F8E00000D005 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		CED202DA27F5F8E00000D005 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		CED202DB27F5F8E00000D005 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		CED202DC27F5F8E00000D005 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		CED202DD27F5F8E00000D005 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		CED202DE27F5F8E00000D005 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		CED202DF27F5F8E00000D005 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		CED202E027F5F8E00000D005 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
 		CEDFBDBD231299A50031B5EE /* Radosne Wieczorki iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Radosne Wieczorki iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDFBDC0231299A50031B5EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEDFBDC2231299A50031B5EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -205,17 +205,17 @@
 		CE3AC83C231C3DE200DC577E /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
-				CE3AC849231C40CD00DC577E /* FMDatabase.h */,
-				CE3AC840231C40CD00DC577E /* FMDatabase.m */,
-				CE3AC848231C40CD00DC577E /* FMDatabaseAdditions.h */,
-				CE3AC84A231C40CD00DC577E /* FMDatabaseAdditions.m */,
-				CE3AC845231C40CD00DC577E /* FMDatabasePool.h */,
-				CE3AC847231C40CD00DC577E /* FMDatabasePool.m */,
-				CE3AC841231C40CD00DC577E /* FMDatabaseQueue.h */,
-				CE3AC842231C40CD00DC577E /* FMDatabaseQueue.m */,
-				CE3AC843231C40CD00DC577E /* FMDB.h */,
-				CE3AC846231C40CD00DC577E /* FMResultSet.h */,
-				CE3AC844231C40CD00DC577E /* FMResultSet.m */,
+				CED202DD27F5F8E00000D005 /* FMDatabase.m */,
+				CED202DC27F5F8E00000D005 /* FMDatabaseAdditions.h */,
+				CED202D827F5F8E00000D005 /* FMDatabaseAdditions.m */,
+				CED202DA27F5F8E00000D005 /* FMDatabasePool.h */,
+				CED202D927F5F8E00000D005 /* FMDatabasePool.m */,
+				CED202DB27F5F8E00000D005 /* FMDatabaseQueue.h */,
+				CED202E027F5F8E00000D005 /* FMDatabaseQueue.m */,
+				CED202D727F5F8E00000D005 /* FMDB.h */,
+				CED202DE27F5F8E00000D005 /* FMResultSet.h */,
+				CED202DF27F5F8E00000D005 /* FMResultSet.m */,
+				CED202D627F5F8D10000D005 /* FMDatabase.h */,
 				CE3AC83F231C40CC00DC577E /* Radosne Wieczorki iOS-Bridging-Header.h */,
 			);
 			path = FMDB;
@@ -438,33 +438,33 @@
 			files = (
 				CE9620652343DD6700469796 /* DisplayFavoriteCell.swift in Sources */,
 				CE145DA123410BCB0032C97C /* ListOfFavoritesController.swift in Sources */,
+				CED202E427F5F8E00000D005 /* FMResultSet.m in Sources */,
 				CE3AC83B231C3D0300DC577E /* DatabaseManager.swift in Sources */,
 				CEE6ED4D24E8413200B780E9 /* LauchScreenController.swift in Sources */,
+				CED202E127F5F8E00000D005 /* FMDatabaseAdditions.m in Sources */,
 				CEFC4D36235629AF00796F58 /* AddToFavoritesController.swift in Sources */,
-				CE3AC84E231C40CD00DC577E /* FMDatabasePool.m in Sources */,
 				CE145DA7234153EE0032C97C /* SettingsController.swift in Sources */,
 				CEFC9B33231A89C60073C344 /* ListTableViewCell.swift in Sources */,
 				CEFC9B2D231A6CC10073C344 /* DisplayController.swift in Sources */,
 				CEFC4D3A2356303F00796F58 /* DeleteController.swift in Sources */,
 				CE3C9C13233159D5006D02E8 /* DataBaseHelper.swift in Sources */,
 				CE0947A42342423500AAFE70 /* CreateNewListController.swift in Sources */,
+				CED202E327F5F8E00000D005 /* FMDatabase.m in Sources */,
 				CE9620632343D93800469796 /* DisplayFavorite.swift in Sources */,
-				CE3AC84B231C40CD00DC577E /* FMDatabase.m in Sources */,
 				CEDFBDC3231299A50031B5EE /* ViewController.swift in Sources */,
 				CE7294422323D2110054A03B /* DatabaseFavorites.swift in Sources */,
-				CE3AC84C231C40CD00DC577E /* FMDatabaseQueue.m in Sources */,
+				CED202E227F5F8E00000D005 /* FMDatabasePool.m in Sources */,
 				CE3C9C1723337CC0006D02E8 /* SearchTableViewCell.swift in Sources */,
 				CEDFBDC1231299A50031B5EE /* AppDelegate.swift in Sources */,
 				CE145DA323410DF30032C97C /* ListOfFavoritesCell.swift in Sources */,
 				CE3C9C1523315B2A006D02E8 /* SearchController.swift in Sources */,
-				CE3AC84F231C40CD00DC577E /* FMDatabaseAdditions.m in Sources */,
 				CEFC9B2F231A6DA00073C344 /* GamesArray.swift in Sources */,
-				CE3AC84D231C40CD00DC577E /* FMResultSet.m in Sources */,
 				CEC8D17123199B8400247D86 /* ListController.swift in Sources */,
 				CE145DA923415CC60032C97C /* Toast.swift in Sources */,
 				CE3988D3231E69EE006EC963 /* SettingsService.swift in Sources */,
 				CE0947A623424E3200AAFE70 /* AlertService.swift in Sources */,
 				CEC8D1732319B66800247D86 /* Game.swift in Sources */,
+				CED202E527F5F8E00000D005 /* FMDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

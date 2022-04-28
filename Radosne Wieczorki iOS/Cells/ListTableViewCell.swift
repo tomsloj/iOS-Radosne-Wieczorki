@@ -11,6 +11,7 @@ import UIKit
 class ListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
+    let sService:SettingsService = SettingsService()
     
     override func awakeFromNib() {
         super.awakeFromNib()

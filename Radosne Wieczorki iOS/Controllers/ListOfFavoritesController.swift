@@ -19,6 +19,8 @@ class ListOfFavoritesController: UIViewController {
     var toSend:String = ""
     
     let databaseFavorites = DatabaseFavorites()
+    let sService:SettingsService = SettingsService()
+    var fontSize:CGFloat!
     
     override func viewDidLoad()
     {
@@ -28,11 +30,16 @@ class ListOfFavoritesController: UIViewController {
     
         list = databaseFavorites.getFavoritesList()
         
+        fontSize = CGFloat(sService.getTextSize())
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        if(fontSize != CGFloat(sService.getTextSize()))
+        {
+            fontSize = CGFloat(sService.getTextSize())
+            tableView.reloadData()
+        }
     }
     
     @IBAction func createNewFavoriteClicked(_ sender: Any) {
@@ -56,8 +63,6 @@ class ListOfFavoritesController: UIViewController {
     {
         self.tableView.reloadData()
     }
-
-    
 }
 
 extension ListOfFavoritesController: UITableViewDataSource, UITableViewDelegate
@@ -93,6 +98,7 @@ extension ListOfFavoritesController: UITableViewDataSource, UITableViewDelegate
         let name = list[indexPath.row]
         
         cell.setCell(name: name)
+        cell.nameOfFavorite.font = cell.nameOfFavorite.font.withSize(fontSize)
         return cell
     }
     

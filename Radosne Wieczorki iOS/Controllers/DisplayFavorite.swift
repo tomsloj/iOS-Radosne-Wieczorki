@@ -14,9 +14,13 @@ class DisplayFavorite: UIViewController {
     
     var favoriteName:String = ""
     
+    var toSend:String!
+    
     let databaseFavorites = DatabaseFavorites()
     
     var list:[String] = []
+    let sService:SettingsService = SettingsService()
+    var fontSize:CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +29,16 @@ class DisplayFavorite: UIViewController {
         list = self.databaseFavorites.getGamesInFavorite(name: favoriteName)
         Toast.showToast(message: "display favorite", controller: self)
 
+        fontSize = CGFloat(sService.getTextSize())
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if(fontSize != CGFloat(sService.getTextSize()))
+        {
+            fontSize = CGFloat(sService.getTextSize())
+            tableView.reloadData()
+        }
     }
     
     func update()
@@ -38,7 +52,17 @@ class DisplayFavorite: UIViewController {
 extension DisplayFavorite: UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
+//        let databaeHelper:DataBaseHelper = DataBaseHelper()
+//
+//        let gamesArray = databaeHelper.getGamesInCategory(category: txt)
+        
+        let text = list[indexPath.row]
+        
+        toSend = text
+        
+        performSegue(withIdentifier: "goToDisplay", sender: self)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -56,15 +80,17 @@ extension DisplayFavorite: UITableViewDelegate, UITableViewDataSource
         let name = list[indexPath.row]
         
         cell.setCell(name: name)
+        cell.gameName.font = cell.gameName.font.withSize(fontSize)
         
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    override func prepare(for segue:UIStoryboardSegue, sender: Any?)
     {
-        if segue.identifier == "openFavorite"
+        if segue.identifier == "goToDisplay"
         {
-            
+            let viewController = segue.destination as! DisplayController
+            viewController.gameName = toSend
         }
     }
 }

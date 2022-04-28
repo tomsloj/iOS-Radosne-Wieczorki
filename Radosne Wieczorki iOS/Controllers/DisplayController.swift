@@ -14,7 +14,6 @@ class DisplayController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var textLabel: UILabel!
-    
     var gameName:String?
     
     let sService:SettingsService = SettingsService()
@@ -35,16 +34,13 @@ class DisplayController: UIViewController {
         categoryLabel.font = categoryLabel.font.withSize(CGFloat(sService.getTextSize()))
         textLabel.font = textLabel.font.withSize(CGFloat(sService.getTextSize()))
     }
-    
-    
+        
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(false)
         titleLabel.font = titleLabel.font.withSize(CGFloat(sService.getTextSize() + 4.0))
         categoryLabel.font = categoryLabel.font.withSize(CGFloat(sService.getTextSize()))
         textLabel.font = textLabel.font.withSize(CGFloat(sService.getTextSize()))
     }
-    
-    
     
     @IBAction func addToList(_ sender: Any) {
         let dialog = alertService.displayCreateNewListDialog(game: gameName)
@@ -58,6 +54,5 @@ class DisplayController: UIViewController {
         
         present(dialog, animated: true)
     }
-    
-    
+       
 }
