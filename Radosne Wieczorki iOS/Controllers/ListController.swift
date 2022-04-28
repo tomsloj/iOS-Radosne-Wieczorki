@@ -14,6 +14,8 @@ class ListController: UIViewController, UITableViewDataSource, UITableViewDelega
     var fontSize:CGFloat!
     var toSend:String!
     let sService:SettingsService = SettingsService()
+    let databaseHelper:DataBaseHelper = DataBaseHelper()
+    var gamesArray:[String] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,6 +28,8 @@ class ListController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.delegate = self
         
         fontSize = CGFloat(sService.getTextSize())
+        
+        gamesArray = databaseHelper.getGamesInCategory(category: txt)
 
     }
     
@@ -50,10 +54,6 @@ class ListController: UIViewController, UITableViewDataSource, UITableViewDelega
         */
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let databaeHelper:DataBaseHelper = DataBaseHelper()
-        
-        let gamesArray = databaeHelper.getGamesInCategory(category: txt)
-        
         let text = gamesArray[indexPath.row]
         
         toSend = text
@@ -76,21 +76,16 @@ class ListController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let databaeHelper:DataBaseHelper = DataBaseHelper()
-        let gamesArray = databaeHelper.getGamesInCategory(category: txt)
         return gamesArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ListTableViewCell
         
-        let databaeHelper:DataBaseHelper = DataBaseHelper()
-        let gamesArray = databaeHelper.getGamesInCategory(category: txt)
-        
         let text = gamesArray[indexPath.row]
         
         cell.nameLabel.text = text
-        cell.nameLabel.font = cell.nameLabel.font.withSize(fontSize-1.0)
+        cell.nameLabel.font = cell.nameLabel.font.withSize(fontSize-0.8)
         
         return cell
     }
