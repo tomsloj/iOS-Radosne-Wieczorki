@@ -30,6 +30,16 @@ class ListController: UIViewController, UITableViewDataSource, UITableViewDelega
         fontSize = CGFloat(sService.getTextSize())
         
         gamesArray = databaseHelper.getGamesInCategory(category: txt)
+        
+        if txt == "all"
+        {
+            title = "Wszystkie zabawy"
+        }
+        else
+        {
+            title = String(txt.prefix(1)).capitalized + String(txt.dropFirst())
+        }
+        
 
     }
     

@@ -24,6 +24,8 @@ class DisplayFavorite: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = favoriteName
+        
         tableView.tableFooterView = UIView()
         
         list = self.databaseFavorites.getGamesInFavorite(name: favoriteName)

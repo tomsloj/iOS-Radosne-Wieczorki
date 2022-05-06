@@ -22,6 +22,9 @@ class DisplayController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = gameName
+        // usunięcie marginesu w opisie
+        textLabel.textContainer.lineFragmentPadding = 0
         
         let databaseHelper = DataBaseHelper()
         

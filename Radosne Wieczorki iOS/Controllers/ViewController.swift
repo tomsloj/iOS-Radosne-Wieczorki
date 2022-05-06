@@ -25,9 +25,18 @@ class ViewController: UIViewController {
     
     var label:UILabel!
     
+//    func centerVertically(padding: CGFloat = 18.0) {
+//        // No point in doing anything if we don't have an imageView size
+//        guard let imageFrame = integrationButton.imageView?.frame else { return }
+//        integrationButton.titleLabel?.numberOfLines = 0
+//        integrationButton.titleEdgeInsets.left = -(imageFrame.width + padding)
+//        integrationButton.titleEdgeInsets.top = (imageFrame.height + padding)
+//        integrationButton.imageView?.bounds.insetBy(dx: 0.5, dy: 0.5)
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        centerVertically()
         
 //        perceptivityButton.contentVerticalAlignment = .fill
 //        perceptivityButton.contentHorizontalAlignment = .fill

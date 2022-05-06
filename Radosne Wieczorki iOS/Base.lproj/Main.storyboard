@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search Controller-->
+        <!--Szukaj-->
         <scene sceneID="fbH-ZX-by6">
             <objects>
                 <viewController id="p0O-Yl-St4" customClass="SearchController" customModule="Radosne_Wieczorki_iOS" sceneMemberID="viewController">
@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kFo-rI-8Cv">
-                                <rect key="frame" x="8" y="270" width="398" height="592"/>
+                                <rect key="frame" x="8" y="270" width="398" height="543"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchCell" id="DkU-dk-vUO" customClass="SearchTableViewCell" customModule="Radosne_Wieczorki_iOS" customModuleProvider="target">
@@ -110,7 +110,7 @@
                             <constraint firstItem="W9m-CZ-D4c" firstAttribute="trailing" secondItem="Hpy-TC-ca7" secondAttribute="trailing" constant="8" id="uRy-RD-d5d"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="L7t-B7-mpU">
+                    <navigationItem key="navigationItem" title="Szukaj" id="L7t-B7-mpU">
                         <barButtonItem key="backBarButtonItem" title="Wróć" id="gbP-DA-Shh"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape.fill" catalog="system" id="pOB-Ol-1R6">
                             <connections>
@@ -132,7 +132,7 @@
             </objects>
             <point key="canvasLocation" x="2389.5999999999999" y="-643.62818590704649"/>
         </scene>
-        <!--List Of Favorites Controller-->
+        <!--Listy-->
         <scene sceneID="Zgk-Ja-BaZ">
             <objects>
                 <viewController id="W2i-1z-vwY" customClass="ListOfFavoritesController" customModule="Radosne_Wieczorki_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -141,7 +141,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yOz-bT-DQL">
-                                <rect key="frame" x="0.0" y="88" width="414" height="724"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="675"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <color key="sectionIndexBackgroundColor" name="Background"/>
                                 <prototypes>
@@ -195,7 +195,7 @@
                             <constraint firstItem="mKx-4Y-LtX" firstAttribute="bottom" secondItem="yOz-bT-DQL" secondAttribute="bottom" constant="50" id="iR8-Ac-7BW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9Xl-px-0fz">
+                    <navigationItem key="navigationItem" title="Listy" id="9Xl-px-0fz">
                         <barButtonItem key="backBarButtonItem" title="Wróć" id="HWv-nr-0ew"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape.fill" catalog="system" id="Ibu-zy-PmU">
                             <connections>
@@ -221,7 +221,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ndO-Bp-7Cv">
-                                <rect key="frame" x="0.0" y="88" width="414" height="724"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="675"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <color key="sectionIndexBackgroundColor" name="Background"/>
                                 <prototypes>
@@ -284,7 +284,7 @@
             </objects>
             <point key="canvasLocation" x="2389.5999999999999" y="843.32833583208401"/>
         </scene>
-        <!--Settings Controller-->
+        <!--Ustawienia-->
         <scene sceneID="kMn-ww-hze">
             <objects>
                 <viewController id="wfa-9p-LCc" customClass="SettingsController" customModule="Radosne_Wieczorki_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -359,7 +359,7 @@
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ikony: Freepik.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmm-Z7-kPo">
-                                <rect key="frame" x="16" y="817" width="143" height="21"/>
+                                <rect key="frame" x="16" y="768" width="143" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -387,7 +387,7 @@
                             <constraint firstItem="Lyd-DT-27k" firstAttribute="leading" secondItem="Iv9-Zk-KcS" secondAttribute="trailing" constant="24" id="pTh-YU-BZV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="6MZ-KS-VvK">
+                    <navigationItem key="navigationItem" title="Ustawienia" largeTitleDisplayMode="never" id="6MZ-KS-VvK">
                         <barButtonItem key="backBarButtonItem" title="Wróć" id="ehb-ai-GQc"/>
                     </navigationItem>
                     <connections>
@@ -544,6 +544,7 @@
                             <constraint firstItem="Tb2-Sl-Pcg" firstAttribute="width" secondItem="cMs-4D-uQ7" secondAttribute="width" id="xtd-Mn-gkJ"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Radosne Wieczorki" leftItemsSupplementBackButton="YES" id="gFq-Sz-SBU">
                         <barButtonItem key="backBarButtonItem" title="Wróć" id="rgt-6T-dBe"/>
                         <barButtonItem key="rightBarButtonItem" image="gearshape.fill" catalog="system" id="q31-Im-tCg">
@@ -552,6 +553,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="competitionButton" destination="egn-Ru-YMx" id="NFY-HX-RWF"/>
                         <outlet property="dancesButton" destination="W6u-FL-u8i" id="LK8-Mw-yd2"/>
@@ -622,7 +624,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="tS0-xr-Aix">
-                        <barButtonItem key="backBarButtonItem" title="Wróć" id="xVD-Ie-fxt"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape.fill" catalog="system" id="PkU-Ro-Lxx">
                             <connections>
                                 <segue destination="wfa-9p-LCc" kind="push" id="xgT-lE-mTQ"/>
@@ -647,7 +648,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm5-RK-1T4">
-                                <rect key="frame" x="167" y="793" width="80" height="69"/>
+                                <rect key="frame" x="167" y="744" width="80" height="69"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="BbH-7i-uSR"/>
                                 </constraints>
@@ -657,7 +658,7 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PyP-wF-mme">
-                                <rect key="frame" x="0.0" y="88" width="414" height="711"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="662"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFp-vz-1Dz">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="178"/>
@@ -689,7 +690,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUp-nR-4q1">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUp-nR-4q1">
                                                 <rect key="frame" x="8" y="112" width="398" height="50"/>
                                                 <color key="backgroundColor" name="Background"/>
                                                 <constraints>
@@ -728,12 +729,12 @@
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWh-6L-w7q">
-                                <rect key="frame" x="247" y="799" width="167" height="63"/>
+                                <rect key="frame" x="247" y="750" width="167" height="63"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button" backgroundImage="tło_lauch_screen.png"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhE-m1-MkB">
-                                <rect key="frame" x="0.0" y="799" width="167" height="63"/>
+                                <rect key="frame" x="0.0" y="750" width="167" height="63"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button" backgroundImage="tło_lauch_screen.png"/>
                                 <userDefinedRuntimeAttributes>
@@ -807,7 +808,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="xh7-bh-l7g"/>
         <segue reference="Xxb-AC-n2m"/>
-        <segue reference="4eN-ce-Ilq"/>
+        <segue reference="O5L-qw-VEG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>

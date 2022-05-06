@@ -523,6 +523,28 @@ class DatabaseFavorites
         sqlite3_finalize(statement)
     }
     
+    func getJSON( favoriteListName:String ) -> String
+    {
+        do
+        {
+            let dbHelper = DataBaseHelper()
+            let gamesNamesList:[String] = getGamesInFavorite(name: favoriteListName)
+            
+            var gamesList:[GameStruct] = []
+            for gameName in gamesNamesList {
+                gamesList.append(GameStruct(name: gameName, category: dbHelper.getCategory(game: gameName), text: dbHelper.getText(game: gameName), note: getNotes(game: gameName, playlist: favoriteListName)))
+            }
+            let favorite = FavoriteStruct(name: favoriteListName, games: gamesList)
+            let jsonData = try JSONEncoder().encode(favorite)
+            let jsonString = String(data: jsonData, encoding: .utf8)!
+            return jsonString
+        }
+        catch {
+            print(error)
+            return ""
+        }
+        
+    }
  
 }
 
@@ -535,4 +557,16 @@ class SqliteError : Error {
     init(error: Int32) {
         self.error = error
     }
+}
+struct GameStruct : Codable
+{
+    let name : String
+    let category : String
+    let text : String
+    let note : String
+}
+struct FavoriteStruct : Codable
+{
+    let name : String
+    let games : [GameStruct]
 }
