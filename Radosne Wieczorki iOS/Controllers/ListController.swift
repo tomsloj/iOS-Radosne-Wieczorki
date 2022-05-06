@@ -40,6 +40,31 @@ class ListController: UIViewController, UITableViewDataSource, UITableViewDelega
             fontSize = CGFloat(sService.getTextSize())
             tableView.reloadData()
         }
+        
+        if #available(iOS 13.0, *) {
+            self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+            
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = UIColor.red
+            appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+          self.navigationController?.navigationBar.standardAppearance = appearance
+            self.navigationController?.navigationBar.scrollEdgeAppearance = self.navigationController?.navigationBar.standardAppearance
+            self.navigationController?.navigationBar.tintColor = UIColor.white
+        } else {
+            self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+            self.navigationController?.navigationBar.tintColor = UIColor.white
+            self.navigationController?.navigationBar.barTintColor = UIColor.red
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        }
+        
+        if sService.isDarkMode() {
+            overrideUserInterfaceStyle = .dark
+        }
+        else
+        {
+            overrideUserInterfaceStyle = .light
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -88,5 +113,15 @@ class ListController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.nameLabel.font = cell.nameLabel.font.withSize(fontSize-0.8)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+    {
+        let verticalPadding: CGFloat = 2.5
+
+        let maskLayer = CALayer()
+        maskLayer.backgroundColor = UIColor.black.cgColor
+        maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 0, dy: verticalPadding/2)
+        cell.layer.mask = maskLayer
     }
 }

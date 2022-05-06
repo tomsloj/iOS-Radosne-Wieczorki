@@ -11,8 +11,10 @@ import Foundation
 class SettingsService
 {
     private var textSize:Int?
+    private var darkMode:Bool?
     
     private let textSizeKey = "textSize"
+    private let darkModeKey = "darkMode"
     private let prevVersionKey = "prevVersion"
     
     public func setTextSize(size:Double)
@@ -62,6 +64,24 @@ class SettingsService
         return appVersion ?? "error"
     }
     
+    public func changeDarkModeStatus()
+    {
+        let preferences = UserDefaults.standard
+        preferences.set(!preferences.bool(forKey: darkModeKey), forKey: darkModeKey)
+        preferences.synchronize()
+    }
     
+    public func isDarkMode()->Bool
+    {
+        let preferences = UserDefaults.standard
+        if preferences.object(forKey: darkModeKey) == nil
+        {
+            return false
+        }
+        else
+        {
+            return preferences.bool(forKey: darkModeKey)
+        }
+    }
     
 }

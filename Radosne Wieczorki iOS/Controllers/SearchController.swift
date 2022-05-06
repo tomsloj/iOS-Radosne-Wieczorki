@@ -51,6 +51,15 @@ class SearchController: UIViewController {
             findInDescriptionLabel.font = findInDescriptionLabel.font.withSize(fontSize)
             findButton.titleLabel?.font = findButton.titleLabel?.font.withSize(fontSize+3.0)
         }
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+        
+        if sService.isDarkMode() {
+            overrideUserInterfaceStyle = .dark
+        }
+        else
+        {
+            overrideUserInterfaceStyle = .light
+        }
     }
     
     @IBAction func searchButtonClicked(_ sender: UIButton)
@@ -128,5 +137,15 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate
         cell.nameLabel.font = cell.nameLabel.font.withSize(fontSize)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+    {
+        let verticalPadding: CGFloat = 2.5
+
+        let maskLayer = CALayer()
+        maskLayer.backgroundColor = UIColor.black.cgColor
+        maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 0, dy: verticalPadding/2)
+        cell.layer.mask = maskLayer
     }
 }

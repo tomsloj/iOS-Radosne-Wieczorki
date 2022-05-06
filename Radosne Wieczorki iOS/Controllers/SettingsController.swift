@@ -12,17 +12,31 @@ class SettingsController: UIViewController {
     
     
     @IBOutlet weak var textSizeLabel: UILabel!
+    @IBOutlet weak var darkModeLabel: UILabel!
+    @IBOutlet weak var sendOpinionLabel: UILabel!
+    @IBOutlet weak var iconsLabel: UILabel!
+    @IBOutlet weak var darkModeSwitch: UISwitch!
     
     let sService:SettingsService = SettingsService()
     
     override func viewDidLoad() {
-        //textSizeLabel.font = textSizeLabel.font.withSize(CGFloat(sService.getTextSize()))
+        if sService.isDarkMode() {
+            darkModeSwitch.isOn = true
+            overrideUserInterfaceStyle = .dark
+        }
+        else
+        {
+            darkModeSwitch.isOn = false
+            overrideUserInterfaceStyle = .light
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         textSizeLabel.font = textSizeLabel.font.withSize(CGFloat(sService.getTextSize()))
-        //Toast.showToast(message: "aaaa", controller: self)
+        darkModeLabel.font = darkModeLabel.font.withSize(CGFloat(sService.getTextSize()))
+        sendOpinionLabel.font = sendOpinionLabel.font.withSize(CGFloat(sService.getTextSize()))
+        iconsLabel.font = iconsLabel.font.withSize(CGFloat(sService.getTextSize()))
     }
     
     
@@ -36,6 +50,9 @@ class SettingsController: UIViewController {
             
             
             textSizeLabel.font = textSizeLabel.font.withSize(CGFloat(sService.getTextSize()))
+            darkModeLabel.font = darkModeLabel.font.withSize(CGFloat(sService.getTextSize()))
+            sendOpinionLabel.font = sendOpinionLabel.font.withSize(CGFloat(sService.getTextSize()))
+            iconsLabel.font = iconsLabel.font.withSize(CGFloat(sService.getTextSize()))
             
             
             
@@ -51,8 +68,29 @@ class SettingsController: UIViewController {
             
             
             textSizeLabel.font = textSizeLabel.font.withSize(CGFloat(sService.getTextSize()))
+            darkModeLabel.font = darkModeLabel.font.withSize(CGFloat(sService.getTextSize()))
+            sendOpinionLabel.font = sendOpinionLabel.font.withSize(CGFloat(sService.getTextSize()))
+            iconsLabel.font = iconsLabel.font.withSize(CGFloat(sService.getTextSize()))
         }
     }
     
+    @IBAction func darkModeStateChanged(_ sender: Any) {
+        sService.changeDarkModeStatus()
+        if sService.isDarkMode() {
+            overrideUserInterfaceStyle = .dark
+            UIApplication.shared.windows.forEach { window in
+                window.overrideUserInterfaceStyle = .dark
+            }
+        }
+        else
+        {
+            overrideUserInterfaceStyle = .light
+            UIApplication.shared.windows.forEach { window in
+                window.overrideUserInterfaceStyle = .light
+            }
+        }
+        
+        
+    }
     
 }

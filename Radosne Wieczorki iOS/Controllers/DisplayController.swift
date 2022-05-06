@@ -37,6 +37,8 @@ class DisplayController: UIViewController {
         
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(false)
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+        
         titleLabel.font = titleLabel.font.withSize(CGFloat(sService.getTextSize() + 4.0))
         categoryLabel.font = categoryLabel.font.withSize(CGFloat(sService.getTextSize()))
         textLabel.font = textLabel.font.withSize(CGFloat(sService.getTextSize()))
