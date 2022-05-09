@@ -496,7 +496,15 @@ class DatabaseFavorites
             let notes = sqlite3_column_text(statement, 0)
             sqlite3_finalize(statement)
             statement = nil
-            return String(cString:notes!)
+            if notes != nil
+            {
+                return String(cString:notes!)
+            }
+            else
+            {
+                return ""
+            }
+            
         }
         else
         {
@@ -543,9 +551,28 @@ class DatabaseFavorites
             print(error)
             return ""
         }
-        
     }
- 
+    
+    func importJSON(json: String) -> Bool
+    {
+        let dbHelper = DataBaseHelper()
+        let jsonData = json.data(using: .utf8)!
+        let favorite: FavoriteStruct = try! JSONDecoder().decode(FavoriteStruct.self, from: jsonData)
+        if favoriteExist(name: favorite.name)
+        {
+            return false
+        }
+        createFavorites(name: favorite.name, game: nil)
+        for game in favorite.games {
+            //jeśli nie mieliśmy takiej gry w bazie to ją dodajemy
+            if !dbHelper.gameExist(game: game.name)
+            {
+                dbHelper.addGame(category: game.category, game: game.name, text: game.text)
+            }
+            addGametoFavorite(name: favorite.name, game: game.name)
+        }
+        return true
+    }
 }
 
 class SqliteError : Error {

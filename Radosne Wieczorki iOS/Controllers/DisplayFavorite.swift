@@ -29,13 +29,14 @@ class DisplayFavorite: UIViewController {
         tableView.tableFooterView = UIView()
         
         list = self.databaseFavorites.getGamesInFavorite(name: favoriteName)
-        Toast.showToast(message: "display favorite", controller: self)
-
+        Toast.showToast(message: databaseFavorites.getJSON(favoriteListName: favoriteName), controller: self)
+//        let tmp = databaseFavorites.importJSON(json: databaseFavorites.getJSON(favoriteListName: favoriteName))
         fontSize = CGFloat(sService.getTextSize())
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
         if(fontSize != CGFloat(sService.getTextSize()))
         {
             fontSize = CGFloat(sService.getTextSize())
@@ -48,6 +49,26 @@ class DisplayFavorite: UIViewController {
         self.tableView.reloadData()
     }
     
+    @IBAction func exportClicker(_ sender: Any) {
+        let JSONString = databaseFavorites.getJSON(favoriteListName: favoriteName)
+        let filePath = NSHomeDirectory() + "/Documents/test.json"
+        print("export")
+        print(filePath)
+        if FileManager.default.createFile(atPath: filePath, contents: JSONString.data(using: .utf8), attributes: nil)
+        {
+            Toast.showToast(message: "Lista została zapisana do pliku", controller: self)
+        }
+        else
+        {
+            Toast.showToast(message: "Eksport listy zakończył się niepowodzeniem", controller: self)
+        }
+    }
+    
+    @IBAction func deleteList(_ sender: Any) {
+        databaseFavorites.deleteFavorite(name: favoriteName)
+        Toast.showToast(message: "Usunięto listę: " + favoriteName, controller: self)
+        _ = navigationController?.popViewController(animated: true)
+    }
     
 }
 

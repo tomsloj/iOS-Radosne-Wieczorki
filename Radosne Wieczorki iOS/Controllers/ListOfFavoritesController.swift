@@ -35,8 +35,10 @@ class ListOfFavoritesController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if(fontSize != CGFloat(sService.getTextSize()))
+        let newList = databaseFavorites.getFavoritesList()
+        if(fontSize != CGFloat(sService.getTextSize()) || list.count != newList.count)
         {
+            list = newList
             fontSize = CGFloat(sService.getTextSize())
             tableView.reloadData()
         }
@@ -57,6 +59,22 @@ class ListOfFavoritesController: UIViewController {
         
         Toast.showToast(message: "dialog", controller: self)
         
+    }
+    @IBAction func importClicked(_ sender: Any) {
+        var result = ""
+        let filePath = NSHomeDirectory() + "test.json"
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        {
+            let fileURL = dir.appendingPathComponent("test.json")
+            print("import")
+            print(fileURL)
+            do {
+                result = try String(contentsOf: fileURL, encoding: .utf8)
+            }
+            catch {print("error import")}
+        }
+        databaseFavorites.importJSON(json: result)
+        print(result)
     }
     
     func update()
