@@ -63,26 +63,30 @@ class ListOfFavoritesController: UIViewController, UIDocumentPickerDelegate {
         
     }
     @IBAction func importClicked(_ sender: Any) {
-        var result = ""
         let types = UTType.types(tag: "json", tagClass: UTTagClass.filenameExtension, conformingTo: nil)
         let documentPickerController = UIDocumentPickerViewController(forOpeningContentTypes: types)
         documentPickerController.delegate = self
         self.present(documentPickerController, animated: true, completion: nil)
-        
-        
-        let filePath = NSHomeDirectory() + "test.json"
-        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
-        {
-            let fileURL = dir.appendingPathComponent("test.json")
-            print("import")
-            print(fileURL)
-            do {
-                result = try String(contentsOf: fileURL, encoding: .utf8)
-            }
-            catch {print("error import")}
+    }
+    
+    func documentPicker(_ controller: UIDocumentPickerViewController,
+              didPickDocumentsAt urls: [URL])
+    {
+        var result = ""
+        do {
+            result = try String(contentsOf: urls[0], encoding: .utf8)
         }
-        databaseFavorites.importJSON(json: result)
-        print(result)
+        catch {print("error import")}
+        if !databaseFavorites.importJSON(json: result) || result.isEmpty
+        {
+            Toast.showToast(message: "Import zakończył się niepowodzeniem", controller: self)
+        }
+        else
+        {
+            Toast.showToast(message: "Lista została zainportowana", controller: self)
+            list = databaseFavorites.getFavoritesList()
+            update()
+        }
     }
     
     func update()

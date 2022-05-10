@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import MobileCoreServices
+import UniformTypeIdentifiers
 
-class DisplayFavorite: UIViewController {
+class DisplayFavorite: UIViewController, UIDocumentPickerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,6 +23,7 @@ class DisplayFavorite: UIViewController {
     var list:[String] = []
     let sService:SettingsService = SettingsService()
     var fontSize:CGFloat!
+    var JSONString:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,18 +53,20 @@ class DisplayFavorite: UIViewController {
     }
     
     @IBAction func exportClicker(_ sender: Any) {
-        let JSONString = databaseFavorites.getJSON(favoriteListName: favoriteName)
+        JSONString = databaseFavorites.getJSON(favoriteListName: favoriteName)
         let filePath = NSHomeDirectory() + "/Documents/test.json"
         print("export")
         print(filePath)
-        if FileManager.default.createFile(atPath: filePath, contents: JSONString.data(using: .utf8), attributes: nil)
-        {
-            Toast.showToast(message: "Lista została zapisana do pliku", controller: self)
-        }
-        else
-        {
-            Toast.showToast(message: "Eksport listy zakończył się niepowodzeniem", controller: self)
-        }
+        
+        let documentPicker =
+            UIDocumentPickerViewController(forOpeningContentTypes: [.folder])
+        documentPicker.delegate = self
+
+        // Set the initial directory.
+        documentPicker.directoryURL = URL( string: NSHomeDirectory())
+
+        // Present the document picker.
+        present(documentPicker, animated: true, completion: nil)
     }
     
     @IBAction func deleteList(_ sender: Any) {
@@ -70,6 +75,26 @@ class DisplayFavorite: UIViewController {
         _ = navigationController?.popViewController(animated: true)
     }
     
+    func documentPicker(_ controller: UIDocumentPickerViewController,
+              didPickDocumentsAt urls: [URL])
+    {
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYMd_HHmmss"
+        dateFormatter.string(from: date)
+
+        let fileName = favoriteName + "-" + dateFormatter.string(from: date) + ".json"
+        let filePath = urls[0].path + "/" + fileName
+
+        if FileManager.default.createFile(atPath: filePath, contents: JSONString.data(using: .utf8), attributes: nil)
+        {
+            Toast.showToast(message: "Zapisano w " + fileName, controller: self)
+        }
+        else
+        {
+            Toast.showToast(message: "Eksport listy zakończył się niepowodzeniem", controller: self)
+        }
+    }
 }
 
 extension DisplayFavorite: UITableViewDelegate, UITableViewDataSource

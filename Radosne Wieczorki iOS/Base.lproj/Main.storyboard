@@ -145,14 +145,14 @@
                                 <color key="sectionIndexBackgroundColor" name="Background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listOfFavoritesCell" id="FPu-kz-xoO" customClass="ListOfFavoritesCell" customModule="Radosne_Wieczorki_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FPu-kz-xoO" id="1jk-Hu-UrA">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="nameOfFavorite" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJr-ov-qAI">
-                                                    <rect key="frame" x="15" y="11" width="384" height="21.5"/>
+                                                    <rect key="frame" x="15" y="11" width="384" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -237,14 +237,14 @@
                                 <color key="sectionIndexBackgroundColor" name="Background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DisplayFavoriteCell" id="F5T-JK-aBa" customClass="DisplayFavoriteCell" customModule="Radosne_Wieczorki_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F5T-JK-aBa" id="X5J-tj-YzI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="nameOfGame" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQa-g5-zfe">
-                                                    <rect key="frame" x="15" y="11" width="384" height="21.5"/>
+                                                    <rect key="frame" x="15" y="11" width="384" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -595,12 +595,12 @@
         <scene sceneID="wQX-6Q-ZMj">
             <objects>
                 <viewController storyboardIdentifier="List" id="VG1-RF-b8b" customClass="ListController" customModule="Radosne_Wieczorki_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dxY-uR-XAf">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dxY-uR-XAf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C4K-fU-4Zi">
-                                <rect key="frame" x="0.0" y="88" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="846"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <color key="sectionIndexBackgroundColor" name="Background"/>
                                 <prototypes>
@@ -637,13 +637,13 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="0SL-rp-qTp"/>
+                        <viewLayoutGuide key="safeArea" id="jAt-VG-UTI"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
-                            <constraint firstItem="C4K-fU-4Zi" firstAttribute="top" secondItem="0SL-rp-qTp" secondAttribute="top" id="2kJ-X9-Gs4"/>
-                            <constraint firstItem="C4K-fU-4Zi" firstAttribute="leading" secondItem="0SL-rp-qTp" secondAttribute="leading" id="U5e-5W-R56"/>
+                            <constraint firstItem="C4K-fU-4Zi" firstAttribute="top" secondItem="dxY-uR-XAf" secondAttribute="top" id="2kJ-X9-Gs4"/>
+                            <constraint firstItem="C4K-fU-4Zi" firstAttribute="leading" secondItem="dxY-uR-XAf" secondAttribute="leading" id="U5e-5W-R56"/>
                             <constraint firstAttribute="bottom" secondItem="C4K-fU-4Zi" secondAttribute="bottom" constant="50" id="lUW-I4-zW0"/>
-                            <constraint firstItem="C4K-fU-4Zi" firstAttribute="trailing" secondItem="0SL-rp-qTp" secondAttribute="trailing" id="pkY-ph-Vp0"/>
+                            <constraint firstItem="C4K-fU-4Zi" firstAttribute="trailing" secondItem="dxY-uR-XAf" secondAttribute="trailing" id="pkY-ph-Vp0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="tS0-xr-Aix">
@@ -666,12 +666,12 @@
         <scene sceneID="VhL-cN-3LV">
             <objects>
                 <viewController storyboardIdentifier="Display" id="Hbf-00-Ei1" customClass="DisplayController" customModule="Radosne_Wieczorki_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1ak-hj-z0t">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1ak-hj-z0t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm5-RK-1T4">
-                                <rect key="frame" x="167" y="744" width="80" height="69"/>
+                                <rect key="frame" x="167" y="827" width="80" height="69"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="BbH-7i-uSR"/>
                                 </constraints>
@@ -684,7 +684,7 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PyP-wF-mme">
-                                <rect key="frame" x="0.0" y="88" width="414" height="662"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="833"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFp-vz-1Dz">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="178"/>
@@ -764,7 +764,7 @@
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWh-6L-w7q">
-                                <rect key="frame" x="247" y="750" width="167" height="63"/>
+                                <rect key="frame" x="247" y="833" width="167" height="63"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -776,7 +776,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhE-m1-MkB">
-                                <rect key="frame" x="0.0" y="750" width="167" height="63"/>
+                                <rect key="frame" x="0.0" y="833" width="167" height="63"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" backgroundImage="tło_lauch_screen.png">
@@ -792,28 +792,28 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="PVp-VQ-Ssw"/>
+                        <viewLayoutGuide key="safeArea" id="HFe-66-lvS"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
-                            <constraint firstItem="PyP-wF-mme" firstAttribute="leading" secondItem="PVp-VQ-Ssw" secondAttribute="leading" id="4uB-No-gMI"/>
+                            <constraint firstItem="PyP-wF-mme" firstAttribute="leading" secondItem="1ak-hj-z0t" secondAttribute="leading" id="4uB-No-gMI"/>
                             <constraint firstItem="Bm5-RK-1T4" firstAttribute="top" secondItem="PyP-wF-mme" secondAttribute="bottom" constant="-6" id="4w7-ej-vH8"/>
-                            <constraint firstItem="PVp-VQ-Ssw" firstAttribute="trailing" secondItem="HWh-6L-w7q" secondAttribute="trailing" id="61g-Bn-Esd"/>
+                            <constraint firstAttribute="trailing" secondItem="HWh-6L-w7q" secondAttribute="trailing" id="61g-Bn-Esd"/>
                             <constraint firstItem="Bm5-RK-1T4" firstAttribute="leading" secondItem="fhE-m1-MkB" secondAttribute="trailing" id="6Z6-fE-5KS"/>
                             <constraint firstItem="HWh-6L-w7q" firstAttribute="leading" secondItem="Bm5-RK-1T4" secondAttribute="trailing" id="6yf-DP-phw"/>
-                            <constraint firstItem="PyP-wF-mme" firstAttribute="trailing" secondItem="PVp-VQ-Ssw" secondAttribute="trailing" id="7us-wd-klw"/>
+                            <constraint firstItem="PyP-wF-mme" firstAttribute="trailing" secondItem="1ak-hj-z0t" secondAttribute="trailing" id="7us-wd-klw"/>
                             <constraint firstItem="HWh-6L-w7q" firstAttribute="top" secondItem="PyP-wF-mme" secondAttribute="bottom" id="FF9-PC-3Ny"/>
-                            <constraint firstItem="Bm5-RK-1T4" firstAttribute="centerX" secondItem="PVp-VQ-Ssw" secondAttribute="centerX" id="OB4-kI-Egj"/>
-                            <constraint firstItem="PyP-wF-mme" firstAttribute="trailing" secondItem="PVp-VQ-Ssw" secondAttribute="trailing" id="Rs0-cz-otn"/>
-                            <constraint firstItem="Bm5-RK-1T4" firstAttribute="bottom" secondItem="PVp-VQ-Ssw" secondAttribute="bottom" id="Sgc-zw-KjY"/>
-                            <constraint firstItem="PVp-VQ-Ssw" firstAttribute="bottom" secondItem="fhE-m1-MkB" secondAttribute="bottom" id="TGH-sI-j60"/>
-                            <constraint firstItem="PyP-wF-mme" firstAttribute="leading" secondItem="PVp-VQ-Ssw" secondAttribute="leading" id="TMn-Ak-Ppo"/>
-                            <constraint firstItem="PyP-wF-mme" firstAttribute="top" secondItem="PVp-VQ-Ssw" secondAttribute="top" id="a2J-X2-zED"/>
+                            <constraint firstItem="Bm5-RK-1T4" firstAttribute="centerX" secondItem="1ak-hj-z0t" secondAttribute="centerX" id="OB4-kI-Egj"/>
+                            <constraint firstItem="PyP-wF-mme" firstAttribute="trailing" secondItem="1ak-hj-z0t" secondAttribute="trailing" id="Rs0-cz-otn"/>
+                            <constraint firstItem="Bm5-RK-1T4" firstAttribute="bottom" secondItem="1ak-hj-z0t" secondAttribute="bottom" id="Sgc-zw-KjY"/>
+                            <constraint firstAttribute="bottom" secondItem="fhE-m1-MkB" secondAttribute="bottom" id="TGH-sI-j60"/>
+                            <constraint firstItem="PyP-wF-mme" firstAttribute="leading" secondItem="1ak-hj-z0t" secondAttribute="leading" id="TMn-Ak-Ppo"/>
+                            <constraint firstItem="PyP-wF-mme" firstAttribute="top" secondItem="1ak-hj-z0t" secondAttribute="top" id="a2J-X2-zED"/>
                             <constraint firstItem="gFp-vz-1Dz" firstAttribute="width" secondItem="1ak-hj-z0t" secondAttribute="width" id="dmm-ls-EM7"/>
-                            <constraint firstItem="PVp-VQ-Ssw" firstAttribute="bottom" secondItem="PyP-wF-mme" secondAttribute="bottom" constant="63" id="iDo-AB-eUF"/>
-                            <constraint firstItem="fhE-m1-MkB" firstAttribute="leading" secondItem="PVp-VQ-Ssw" secondAttribute="leading" id="j3u-2z-YY0"/>
+                            <constraint firstAttribute="bottom" secondItem="PyP-wF-mme" secondAttribute="bottom" constant="63" id="iDo-AB-eUF"/>
+                            <constraint firstItem="fhE-m1-MkB" firstAttribute="leading" secondItem="1ak-hj-z0t" secondAttribute="leading" id="j3u-2z-YY0"/>
                             <constraint firstItem="fhE-m1-MkB" firstAttribute="top" secondItem="PyP-wF-mme" secondAttribute="bottom" id="kDV-U1-4CI"/>
-                            <constraint firstItem="PyP-wF-mme" firstAttribute="top" secondItem="PVp-VQ-Ssw" secondAttribute="top" id="uw5-gw-gY1"/>
-                            <constraint firstItem="PVp-VQ-Ssw" firstAttribute="bottom" secondItem="HWh-6L-w7q" secondAttribute="bottom" id="zjo-N7-cKr"/>
+                            <constraint firstItem="PyP-wF-mme" firstAttribute="top" secondItem="1ak-hj-z0t" secondAttribute="top" id="uw5-gw-gY1"/>
+                            <constraint firstAttribute="bottom" secondItem="HWh-6L-w7q" secondAttribute="bottom" id="zjo-N7-cKr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yz4-F4-xR9">
@@ -860,7 +860,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Onr-jg-pe6"/>
         <segue reference="Xxb-AC-n2m"/>
-        <segue reference="VbE-7X-8tQ"/>
+        <segue reference="xgT-lE-mTQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
@@ -881,7 +881,7 @@
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <image name="tance" width="312.57000732421875" height="312.57000732421875"/>
         <image name="trash.fill" catalog="system" width="121" height="128"/>
-        <image name="tło_lauch_screen.png" width="810" height="1440"/>
+        <image name="tło_lauch_screen.png" width="128" height="128"/>
         <namedColor name="Background">
             <color red="0.83978410200639209" green="0.83978410200639209" blue="0.83978410200639209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
