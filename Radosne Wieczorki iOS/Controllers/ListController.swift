@@ -103,6 +103,7 @@ class ListController: UIViewController, UITableViewDataSource, UITableViewDelega
         {
             let viewController = segue.destination as! DisplayController
             viewController.gameName = toSend
+            viewController.categoryName = txt
         }
     }
     

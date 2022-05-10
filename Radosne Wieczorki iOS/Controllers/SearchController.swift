@@ -111,6 +111,7 @@ extension SearchController: UITableViewDataSource, UITableViewDelegate
         let game = list[indexPath.row]
         
         vc?.gameName = game
+        vc?.categoryName = nil
         self.navigationController?.pushViewController(vc!, animated: true )
     }
     

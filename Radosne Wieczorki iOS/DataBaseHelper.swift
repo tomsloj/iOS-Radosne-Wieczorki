@@ -220,7 +220,7 @@ class DataBaseHelper
             query = query + " tekst Like '%\(toFind)%'"
         }
         
-        query = query + " ORDER BY zabawa"
+        query = query + " ORDER BY zabawa "// COLLATE UNICODE"
         
         return getList(query: query)
     }

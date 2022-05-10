@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import MobileCoreServices
+import UniformTypeIdentifiers
 
-class ListOfFavoritesController: UIViewController {
+class ListOfFavoritesController: UIViewController, UIDocumentPickerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -62,6 +64,12 @@ class ListOfFavoritesController: UIViewController {
     }
     @IBAction func importClicked(_ sender: Any) {
         var result = ""
+        let types = UTType.types(tag: "json", tagClass: UTTagClass.filenameExtension, conformingTo: nil)
+        let documentPickerController = UIDocumentPickerViewController(forOpeningContentTypes: types)
+        documentPickerController.delegate = self
+        self.present(documentPickerController, animated: true, completion: nil)
+        
+        
         let filePath = NSHomeDirectory() + "test.json"
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
         {

@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4LI-o4-EuE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -198,12 +197,17 @@
                     <navigationItem key="navigationItem" title="Listy" id="9Xl-px-0fz">
                         <barButtonItem key="backBarButtonItem" title="Wróć" id="HWv-nr-0ew"/>
                         <rightBarButtonItems>
-                            <barButtonItem title="Item" image="square.and.arrow.down.fill" catalog="system" id="NPy-dn-rQf">
+                            <barButtonItem title="Stwórz listę" image="plus.app.fill" catalog="system" id="bMT-Wp-NHh">
+                                <connections>
+                                    <action selector="createNewFavoriteClicked:" destination="W2i-1z-vwY" id="2RW-Y9-6KY"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Import" image="square.and.arrow.down.fill" catalog="system" id="NPy-dn-rQf">
                                 <connections>
                                     <action selector="importClicked:" destination="W2i-1z-vwY" id="d6s-ho-xGJ"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Item" image="gearshape.fill" catalog="system" id="Ibu-zy-PmU">
+                            <barButtonItem title="Ustawienia" image="gearshape.fill" catalog="system" id="Ibu-zy-PmU">
                                 <connections>
                                     <segue destination="wfa-9p-LCc" kind="push" id="12D-l7-CJ7"/>
                                 </connections>
@@ -277,17 +281,17 @@
                     <navigationItem key="navigationItem" id="Ot1-WC-uWs">
                         <barButtonItem key="backBarButtonItem" title="Wróć" id="dd2-q9-rhV"/>
                         <rightBarButtonItems>
-                            <barButtonItem title="Item" image="trash.fill" catalog="system" id="MEz-gx-s9G">
+                            <barButtonItem title="Usuń" image="trash.fill" catalog="system" id="MEz-gx-s9G">
                                 <connections>
                                     <action selector="deleteList:" destination="1M7-7Y-xX1" id="KAt-i5-sN7"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Item" image="square.and.arrow.up.fill" catalog="system" id="F7L-62-TNT">
+                            <barButtonItem title="Eksport" image="square.and.arrow.up.fill" catalog="system" id="F7L-62-TNT">
                                 <connections>
                                     <action selector="exportClicker:" destination="1M7-7Y-xX1" id="XQj-jT-JhG"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Item" image="gearshape.fill" catalog="system" id="V3v-sg-odi">
+                            <barButtonItem title="Ustawienia" image="gearshape.fill" catalog="system" id="V3v-sg-odi">
                                 <connections>
                                     <segue destination="wfa-9p-LCc" kind="push" id="oh8-gC-6Zd"/>
                                 </connections>
@@ -601,14 +605,14 @@
                                 <color key="sectionIndexBackgroundColor" name="Background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="xYV-gW-TFU" customClass="ListTableViewCell" customModule="Radosne_Wieczorki_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="41"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="41.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xYV-gW-TFU" id="eRd-aN-UYl">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="41.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hu0-JQ-UHx">
-                                                    <rect key="frame" x="10" y="10" width="394" height="21"/>
+                                                    <rect key="frame" x="10" y="10" width="394" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -666,12 +670,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm5-RK-1T4">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm5-RK-1T4">
                                 <rect key="frame" x="167" y="744" width="80" height="69"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="BbH-7i-uSR"/>
                                 </constraints>
-                                <state key="normal" title="Add to List" backgroundImage="tło_lauch_screen.png"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="plus.square.fill" catalog="system" backgroundImage="tło_lauch_screen.png">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                </state>
                                 <connections>
                                     <action selector="addToList:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="L2L-jQ-kqZ"/>
                                 </connections>
@@ -739,28 +746,50 @@
                                             <constraint firstItem="9Wt-ta-p6B" firstAttribute="top" secondItem="Qzg-J6-b55" secondAttribute="bottom" constant="16" id="tvh-B4-2IY"/>
                                         </constraints>
                                     </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JZn-OC-2wT">
+                                        <rect key="frame" x="0.0" y="178" width="414" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="yHG-Fh-lBt"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="JZn-OC-2wT" firstAttribute="leading" secondItem="PyP-wF-mme" secondAttribute="leading" id="EUe-2G-6gR"/>
                                     <constraint firstItem="gFp-vz-1Dz" firstAttribute="top" secondItem="PyP-wF-mme" secondAttribute="top" id="Lo8-WL-zsq"/>
                                     <constraint firstItem="gFp-vz-1Dz" firstAttribute="leading" secondItem="PyP-wF-mme" secondAttribute="leading" id="SEl-kS-lCM"/>
-                                    <constraint firstAttribute="bottom" secondItem="gFp-vz-1Dz" secondAttribute="bottom" id="Yef-LT-Kbr"/>
+                                    <constraint firstItem="JZn-OC-2wT" firstAttribute="top" secondItem="gFp-vz-1Dz" secondAttribute="bottom" id="YHq-D2-Wor"/>
+                                    <constraint firstAttribute="bottom" secondItem="JZn-OC-2wT" secondAttribute="bottom" id="eZt-jk-0fg"/>
                                     <constraint firstAttribute="trailing" secondItem="gFp-vz-1Dz" secondAttribute="trailing" id="h98-Qv-XQC"/>
+                                    <constraint firstAttribute="trailing" secondItem="JZn-OC-2wT" secondAttribute="trailing" id="ppR-LL-U5k"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWh-6L-w7q">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWh-6L-w7q">
                                 <rect key="frame" x="247" y="750" width="167" height="63"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" backgroundImage="tło_lauch_screen.png"/>
+                                <state key="normal" backgroundImage="tło_lauch_screen.png">
+                                    <imageReference key="image" image="chevron.right" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightClicked:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="jqc-8K-5dr"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhE-m1-MkB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhE-m1-MkB">
                                 <rect key="frame" x="0.0" y="750" width="167" height="63"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" backgroundImage="tło_lauch_screen.png"/>
+                                <state key="normal" backgroundImage="tło_lauch_screen.png">
+                                    <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="leftClicked:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="xhw-4t-iNY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PVp-VQ-Ssw"/>
@@ -789,14 +818,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="yz4-F4-xR9">
                         <barButtonItem key="backBarButtonItem" title="Wróć" id="tm4-bl-YVW"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape.fill" catalog="system" id="TBy-mD-jI2">
+                        <barButtonItem key="rightBarButtonItem" title="Ustawienia" image="gearshape.fill" catalog="system" id="TBy-mD-jI2">
                             <connections>
                                 <segue destination="wfa-9p-LCc" kind="push" id="VbE-7X-8tQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addToFavoritesButton" destination="Bm5-RK-1T4" id="VJ5-IS-2k7"/>
                         <outlet property="categoryLabel" destination="Qzg-J6-b55" id="CUM-KW-mvC"/>
+                        <outlet property="leftButton" destination="fhE-m1-MkB" id="Fur-Xb-llU"/>
+                        <outlet property="playersView" destination="JZn-OC-2wT" id="aaU-XQ-uux"/>
+                        <outlet property="rightButton" destination="HWh-6L-w7q" id="ZkH-hB-aeD"/>
                         <outlet property="textLabel" destination="UUp-nR-4q1" id="aQY-2Y-eq8"/>
                         <outlet property="titleLabel" destination="PnE-Ji-DCo" id="r3g-yr-XpI"/>
                     </connections>
@@ -825,11 +858,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xh7-bh-l7g"/>
+        <segue reference="Onr-jg-pe6"/>
         <segue reference="Xxb-AC-n2m"/>
         <segue reference="VbE-7X-8tQ"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="integracja" width="451.72100830078125" height="451.72100830078125"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
@@ -837,6 +872,8 @@
         <image name="minus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="piosenki" width="61.48699951171875" height="61.48699951171875"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="plus.app.fill" catalog="system" width="128" height="114"/>
+        <image name="plus.square.fill" catalog="system" width="128" height="114"/>
         <image name="refleks" width="512" height="512"/>
         <image name="rywalizacja" width="490.052001953125" height="490.052001953125"/>
         <image name="sprawnosc" width="494.17498779296875" height="494.17498779296875"/>

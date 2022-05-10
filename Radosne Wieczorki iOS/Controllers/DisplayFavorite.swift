@@ -124,6 +124,8 @@ extension DisplayFavorite: UITableViewDelegate, UITableViewDataSource
         {
             let viewController = segue.destination as! DisplayController
             viewController.gameName = toSend
+            viewController.categoryName = favoriteName
+            viewController.isFavorite = true
         }
     }
 }

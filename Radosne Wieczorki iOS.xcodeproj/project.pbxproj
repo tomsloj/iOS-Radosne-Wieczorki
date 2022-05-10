@@ -303,6 +303,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEDFBDE5231299A50031B5EE /* Build configuration list for PBXNativeTarget "Radosne Wieczorki iOS" */;
 			buildPhases = (
+				5CBBC6C9B834212067F79E5C /* [CP] Check Pods Manifest.lock */,
 				CEDFBDB9231299A50031B5EE /* Sources */,
 				CEDFBDBA231299A50031B5EE /* Frameworks */,
 				CEDFBDBB231299A50031B5EE /* Resources */,
@@ -320,6 +321,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEDFBDE8231299A50031B5EE /* Build configuration list for PBXNativeTarget "Radosne Wieczorki iOSTests" */;
 			buildPhases = (
+				D3583D47AA39C131B90D6DA3 /* [CP] Check Pods Manifest.lock */,
 				CEDFBDCD231299A50031B5EE /* Sources */,
 				CEDFBDCE231299A50031B5EE /* Frameworks */,
 				CEDFBDCF231299A50031B5EE /* Resources */,
@@ -338,6 +340,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEDFBDEB231299A50031B5EE /* Build configuration list for PBXNativeTarget "Radosne Wieczorki iOSUITests" */;
 			buildPhases = (
+				AD673F007381B8BB714C5168 /* [CP] Check Pods Manifest.lock */,
 				CEDFBDD8231299A50031B5EE /* Sources */,
 				CEDFBDD9231299A50031B5EE /* Frameworks */,
 				CEDFBDDA231299A50031B5EE /* Resources */,
@@ -430,6 +433,73 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5CBBC6C9B834212067F79E5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Radosne Wieczorki iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\n#if [ $? != 0 ] ; then\n    # print error to STDERR\n#    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n#    exit 1\n#fi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD673F007381B8BB714C5168 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Radosne Wieczorki iOS-Radosne Wieczorki iOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3583D47AA39C131B90D6DA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Radosne Wieczorki iOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CEDFBDB9231299A50031B5EE /* Sources */ = {

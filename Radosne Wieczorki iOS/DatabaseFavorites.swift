@@ -97,8 +97,6 @@ class DatabaseFavorites
         }
     }
     
-    
-    
     //add new game to favorite list
     public func addGametoFavorite(name:String, game:String)
     {
@@ -155,7 +153,6 @@ class DatabaseFavorites
 
     }
     
-    
     //@return number of game in favorite
     public func numberOfGame(name:String, game:String)->Int
     {
@@ -179,7 +176,6 @@ class DatabaseFavorites
         }
     }
     
-    
     public func gameFromNumber(number:Int, name:String)->String
     {
         var statement: OpaquePointer?
@@ -201,7 +197,6 @@ class DatabaseFavorites
             return "Error 17"
         }
     }
-    
     
     //swap game with game which have lower number
     public func upGame(name:String, game:String)
@@ -243,8 +238,6 @@ class DatabaseFavorites
         }
         sqlite3_finalize(statement)
     }
-    
-    
     
     //swap game with game which have higher number
     public func downGame(name:String, game:String)
@@ -288,7 +281,6 @@ class DatabaseFavorites
         sqlite3_finalize(statement)
     }
     
-    
     //create empty list of favorite
     public func createFavorites(name:String, game:String?)
     {
@@ -298,7 +290,6 @@ class DatabaseFavorites
             addGametoFavorite(name: name, game: game!)
         }
     }
-    
     
     //check if favorite exists
     public func favoriteExist(name:String)->Bool
@@ -328,7 +319,6 @@ class DatabaseFavorites
         }
     }
     
-    
     //check if game is in favorite
     public func gameInFavoriteExists(name:String, game:String)->Bool
     {
@@ -356,7 +346,6 @@ class DatabaseFavorites
             return true
         }
     }
-    
     
     //@return list of games in favorite
     public func getGamesInFavorite(name:String)->[String]
@@ -426,7 +415,6 @@ class DatabaseFavorites
         sqlite3_finalize(statement)
     }
     
-    
     public func deleteGame(name:String, game:String)
     {
         var statement: OpaquePointer?
@@ -461,7 +449,6 @@ class DatabaseFavorites
         }
         sqlite3_finalize(statement)
     }
-    
     
     public func editNameOfFavorite(name:String, newName:String)
     {
