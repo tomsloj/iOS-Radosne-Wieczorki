@@ -244,6 +244,26 @@ class DisplayController: UIViewController {
                 rightButton.isEnabled = true
             }
         }
+        else
+        {
+            let nextGame = databaseHelper.nextGame(category: categoryName!, game: gameName ?? "")
+            if databaseHelper.prevGame(category: categoryName!, game: gameName!).isEmpty
+            {
+                leftButton.isEnabled = false
+            }
+            else
+            {
+                leftButton.isEnabled = true
+            }
+            if nextGame.isEmpty
+            {
+                rightButton.isEnabled = false
+            }
+            else
+            {
+                rightButton.isEnabled = true
+            }
+        }
     }
     
     @objc

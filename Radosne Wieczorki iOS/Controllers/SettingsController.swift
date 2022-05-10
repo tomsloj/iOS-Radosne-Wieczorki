@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class SettingsController: UIViewController {
+class SettingsController: UIViewController, MFMailComposeViewControllerDelegate {
     
     
     @IBOutlet weak var textSizeLabel: UILabel!
@@ -89,8 +90,32 @@ class SettingsController: UIViewController {
                 window.overrideUserInterfaceStyle = .light
             }
         }
-        
-        
+    }
+    
+    @IBAction func sendMailClicked(_ sender: Any) {
+        let mailComposeViewController = configureMailComposer()
+            if MFMailComposeViewController.canSendMail(){
+                self.present(mailComposeViewController, animated: true, completion: nil)
+            }else{
+                Toast.showToast(message: "Nie można wysłać maila", controller: self)
+            }
+    }
+    
+    
+    func configureMailComposer() -> MFMailComposeViewController{
+        let mailComposeVC = MFMailComposeViewController()
+        mailComposeVC.mailComposeDelegate = self
+        mailComposeVC.setToRecipients(["300268@pw.edu.pl"])
+        mailComposeVC.setSubject("Radosne Wieczorki - uwagi")
+        return mailComposeVC
+    }
+    
+func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+        if result == .sent
+        {
+            Toast.showToast(message: "Dziękujemy za kontakt", controller: self)
+        }
     }
     
 }

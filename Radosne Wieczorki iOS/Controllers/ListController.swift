@@ -134,5 +134,15 @@ class ListController: UIViewController, UITableViewDataSource, UITableViewDelega
         maskLayer.backgroundColor = UIColor.black.cgColor
         maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 0, dy: verticalPadding/2)
         cell.layer.mask = maskLayer
+        
+//        if indexPath.row == gamesArray.count - 1
+//        {
+//            let maskLayer = CALayer()
+//            maskLayer.backgroundColor = UIColor.black.cgColor
+//            maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 0, dy: verticalPadding/2)
+//            cell.layer.mask = maskLayer
+//        }
     }
+//    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//    }
 }
