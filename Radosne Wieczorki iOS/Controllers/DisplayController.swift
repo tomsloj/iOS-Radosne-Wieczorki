@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import YouTubePlayerKit
+import youtube_ios_player_helper
 
 
 class DisplayController: UIViewController {
@@ -20,6 +20,9 @@ class DisplayController: UIViewController {
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var playersView: UIStackView!
+    @IBOutlet weak var ytPlayer1: YTPlayerView!
+    @IBOutlet weak var ytPlayer2: YTPlayerView!
+    @IBOutlet weak var ytPlayer3: YTPlayerView!
     @IBOutlet weak var addToFavoritesButton: UIButton!
     var gameName:String?
     var categoryName:String?
@@ -60,8 +63,9 @@ class DisplayController: UIViewController {
         if (isFavorite ?? false)
         {
             let floatingButton = UIButton()
-            floatingButton.setImage(UIImage(named: "plus"), for: .normal)
-            floatingButton.setTitle("notes", for: .normal)
+            floatingButton.setImage(UIImage(systemName: "message.fill"), for: .normal)
+            floatingButton.tintColor = UIColor.white
+            floatingButton.scalesLargeContentImage = true
             floatingButton.backgroundColor = .red
             floatingButton.layer.cornerRadius = 25
             
@@ -76,6 +80,7 @@ class DisplayController: UIViewController {
             floatingButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -40).isActive = true
             floatingButton.addTarget(self, action: #selector(floatingButtonClicked), for: UIControl.Event.touchUpInside)
         }
+        loadYTPlayer()
     }
         
     override func viewWillAppear(_ animated: Bool) {
@@ -151,7 +156,8 @@ class DisplayController: UIViewController {
                 updateLeftRightButtons()
             }
         }
-        
+        self.title = gameName
+        loadYTPlayer()
     }
     @IBAction func rightClicked(_ sender: Any) {
         if !(isFavorite ?? false)
@@ -204,6 +210,8 @@ class DisplayController: UIViewController {
                 updateLeftRightButtons()
             }
         }
+        self.title = gameName
+        loadYTPlayer()
     }
     
     func updateLeftRightButtons()
@@ -237,10 +245,47 @@ class DisplayController: UIViewController {
             }
         }
     }
+    
     @objc
     func floatingButtonClicked(buttin:UIButton)
     {
         print("tap")
+    }
+    
+    func loadYTPlayer()
+    {
+        ytPlayer1.isHidden = true
+        ytPlayer2.isHidden = true
+        ytPlayer3.isHidden = true
+        if let detector = try? NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue) {
+            var ids:[String] = []
+            let matches = detector.matches(in: textLabel.text, options: [], range: NSRange(location: 0, length: textLabel.text.utf16.count))
+
+            for match in matches {
+                guard let range = Range(match.range, in: textLabel.text) else { continue }
+                let url = textLabel.text[range]
+                let id = URLComponents(string: String(url))?.queryItems?.first(where: { $0.name == "v" })?.value
+                if id != nil
+                {
+                    ids.append(id!)
+                }
+            }
+            if ids.count >= 1
+            {
+                ytPlayer1.isHidden = false
+                ytPlayer1.load(withVideoId: ids[0])
+            }
+            if ids.count >= 2
+            {
+                ytPlayer2.isHidden = false
+                ytPlayer2.load(withVideoId: ids[1])
+            }
+            if ids.count >= 3
+            {
+                ytPlayer3.isHidden = false
+                ytPlayer3.load(withVideoId: ids[2])
+            }
+        }
     }
     
 }
