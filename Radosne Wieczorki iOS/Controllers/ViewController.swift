@@ -131,8 +131,10 @@ class ViewController: UIViewController {
         {
         case "toList":
             send(segue:segue)
-        default:
-            message = "error9"
+        case "toListAll":
+            let viewController = segue.destination as! ListController
+            viewController.txt = "all"
+        default:break
         }
         
     }

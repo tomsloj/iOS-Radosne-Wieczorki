@@ -20,6 +20,8 @@ class SettingsController: UIViewController, MFMailComposeViewControllerDelegate 
     
     let sService:SettingsService = SettingsService()
     
+    var stackSize:Int = 0
+    
     override func viewDidLoad() {
         if sService.isDarkMode() {
             darkModeSwitch.isOn = true
@@ -30,6 +32,7 @@ class SettingsController: UIViewController, MFMailComposeViewControllerDelegate 
             darkModeSwitch.isOn = false
             overrideUserInterfaceStyle = .light
         }
+        stackSize = (self.navigationController?.viewControllers.count)!
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -110,7 +113,7 @@ class SettingsController: UIViewController, MFMailComposeViewControllerDelegate 
         return mailComposeVC
     }
     
-func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
         if result == .sent
         {
@@ -118,4 +121,31 @@ func mailComposeController(_ controller: MFMailComposeViewController, didFinishW
         }
     }
     
+    @IBAction func allGamesClicked(_ sender: Any) {
+        print((self.navigationController?.viewControllers.count)!)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+//        print((self.navigationController?.viewControllers.count)!)
+//        print(stackSize)
+//        print("----")
+//        if stackSize < (self.navigationController?.viewControllers.count)!
+//        {
+//            guard let navigationController = self.navigationController else { return }
+//            var navigationArray = navigationController.viewControllers // To get all UIViewController stack as Array
+//            navigationArray.remove(at: navigationArray.count - 2)
+//            self.navigationController?.viewControllers = navigationArray
+//        }
+    }
+    
+    override func prepare(for segue:UIStoryboardSegue, sender: (Any)?)
+    {
+        switch segue.identifier
+        {
+        case "toList":
+            let viewController = segue.destination as! ListController
+            viewController.txt = "all"
+        default: break
+        }
+    }
 }

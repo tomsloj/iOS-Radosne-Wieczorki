@@ -39,8 +39,18 @@ class ListController: UIViewController, UITableViewDataSource, UITableViewDelega
         {
             title = String(txt.prefix(1)).capitalized + String(txt.dropFirst())
         }
-        
-
+        print(self.navigationController?.viewControllers.count)
+        if (self.navigationController?.viewControllers.count)! >= 2
+        {
+            guard let navigationController = self.navigationController else { return }
+            var navigationArray = navigationController.viewControllers // To get all UIViewController stack as Array
+            let temp1 = navigationArray.first
+            let temp2 = navigationArray.last
+            navigationArray.removeAll()
+            navigationArray.append(temp1!)
+            navigationArray.append(temp2!) //To remove all previous UIViewController except the last one
+            self.navigationController?.viewControllers = navigationArray
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,15 +88,6 @@ class ListController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        /*
-        let alertController = UIAlertController(title: "hint", message: "selected \(indexPath.row)", preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-        
-        alertController.addAction(alertAction)
-        
-        present(alertController, animated: true, completion: nil)
-        */
         tableView.deselectRow(at: indexPath, animated: true)
         
         let text = gamesArray[indexPath.row]
@@ -145,4 +146,11 @@ class ListController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 //    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 //    }
+    
+    @IBAction func allGamesClicked(_ sender: Any) {
+        txt = "all"
+        viewDidLoad()
+        viewWillAppear(true)
+        tableView.reloadData()
+    }
 }

@@ -110,7 +110,7 @@ extension ListOfFavoritesController: UITableViewDataSource, UITableViewDelegate
         toSend = text
 
         self.tableView.deselectRow(at: indexPath, animated: true)
-        self.performSegue(withIdentifier: "openFavorite", sender: self)
+        self.performSegue(withIdentifier: "toFavorites", sender: self)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -144,10 +144,15 @@ extension ListOfFavoritesController: UITableViewDataSource, UITableViewDelegate
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.identifier == "openFavorite"
+        switch segue.identifier
         {
-            let viewController = segue.destination as! DisplayFavorite
-            viewController.favoriteName = toSend
+        case "toFavorites":
+                let viewController = segue.destination as! DisplayFavorite
+                viewController.favoriteName = toSend
+            case "toList":
+                let viewController = segue.destination as! ListController
+                viewController.txt = "all"
+        default: break
         }
     }
     

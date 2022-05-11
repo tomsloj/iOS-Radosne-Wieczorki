@@ -98,6 +98,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="leftClicked:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="wJF-mL-XLa"/>
+                                    <segue destination="VG1-RF-b8b" kind="show" identifier="toList" id="SWI-PG-HLq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgE-Qz-DeA">
@@ -124,7 +125,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26" scale="large" weight="bold"/>
                                 </state>
                                 <connections>
-                                    <action selector="addToList:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="GU3-2C-cxK"/>
+                                    <segue destination="W2i-1z-vwY" kind="show" identifier="toFavorites" id="rTg-dG-sqG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -167,7 +168,7 @@
                         <barButtonItem key="backBarButtonItem" title="Wróć" id="gbP-DA-Shh"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape.fill" catalog="system" id="pOB-Ol-1R6">
                             <connections>
-                                <segue destination="wfa-9p-LCc" kind="push" id="O5L-qw-VEG"/>
+                                <segue destination="wfa-9p-LCc" kind="push" identifier="toSettings" id="O5L-qw-VEG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -199,14 +200,14 @@
                                 <color key="sectionIndexBackgroundColor" name="Background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listOfFavoritesCell" id="FPu-kz-xoO" customClass="ListOfFavoritesCell" customModule="Radosne_Wieczorki_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FPu-kz-xoO" id="1jk-Hu-UrA">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="nameOfFavorite" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJr-ov-qAI">
-                                                    <rect key="frame" x="15" y="11" width="384" height="21.5"/>
+                                                    <rect key="frame" x="15" y="11" width="384" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -249,6 +250,7 @@
                                 </state>
                                 <connections>
                                     <action selector="rightClicked:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="4m6-OA-8JH"/>
+                                    <segue destination="p0O-Yl-St4" kind="show" identifier="toSearching" id="C8M-VE-xVP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVz-ye-MZA">
@@ -280,6 +282,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="leftClicked:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="vSr-mx-S61"/>
+                                    <segue destination="VG1-RF-b8b" kind="show" identifier="toList" id="4cL-nh-3da"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -318,14 +321,14 @@
                             </barButtonItem>
                             <barButtonItem title="Ustawienia" image="gearshape.fill" catalog="system" id="Ibu-zy-PmU">
                                 <connections>
-                                    <segue destination="wfa-9p-LCc" kind="push" id="12D-l7-CJ7"/>
+                                    <segue destination="wfa-9p-LCc" kind="push" identifier="toSettings" id="12D-l7-CJ7"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="yOz-bT-DQL" id="XEP-84-5nW"/>
-                        <segue destination="1M7-7Y-xX1" kind="push" identifier="openFavorite" id="ouc-dl-B0C"/>
+                        <segue destination="1M7-7Y-xX1" kind="push" identifier="toFavorites" id="ouc-dl-B0C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BNj-f9-HqY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -346,14 +349,14 @@
                                 <color key="sectionIndexBackgroundColor" name="Background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DisplayFavoriteCell" id="F5T-JK-aBa" customClass="DisplayFavoriteCell" customModule="Radosne_Wieczorki_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F5T-JK-aBa" id="X5J-tj-YzI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="nameOfGame" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQa-g5-zfe">
-                                                    <rect key="frame" x="15" y="11" width="384" height="21.5"/>
+                                                    <rect key="frame" x="15" y="11" width="384" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -392,6 +395,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="leftClicked:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="0sO-hn-oIM"/>
+                                    <segue destination="VG1-RF-b8b" kind="show" identifier="toList" id="FJQ-ya-0Fs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOk-Hb-ldH">
@@ -405,6 +409,7 @@
                                 </state>
                                 <connections>
                                     <action selector="rightClicked:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="eyG-1b-S2s"/>
+                                    <segue destination="p0O-Yl-St4" kind="show" identifier="toSearching" id="Axn-hE-Nqq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2O-xE-cJi">
@@ -418,7 +423,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26" scale="large" weight="bold"/>
                                 </state>
                                 <connections>
-                                    <action selector="addToList:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="6AQ-Nh-gFF"/>
+                                    <segue destination="W2i-1z-vwY" kind="show" identifier="toFavorites" id="CeK-ED-02l"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -457,7 +462,7 @@
                             </barButtonItem>
                             <barButtonItem title="Ustawienia" image="gearshape.fill" catalog="system" id="V3v-sg-odi">
                                 <connections>
-                                    <segue destination="wfa-9p-LCc" kind="push" id="oh8-gC-6Zd"/>
+                                    <segue destination="wfa-9p-LCc" kind="push" identifier="toSettings" id="oh8-gC-6Zd"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -571,7 +576,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="allGamesClicked:" destination="wfa-9p-LCc" eventType="touchUpInside" id="vqu-dJ-vZB"/>
                                     <action selector="leftClicked:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="pUT-i5-vye"/>
+                                    <segue destination="VG1-RF-b8b" kind="show" identifier="toList" id="NMu-6V-BJu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQN-3E-zDt">
@@ -585,6 +592,7 @@
                                 </state>
                                 <connections>
                                     <action selector="rightClicked:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="spa-4L-lDw"/>
+                                    <segue destination="p0O-Yl-St4" kind="show" identifier="toSearching" id="Npr-Vw-gAq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXT-D9-wpA">
@@ -598,7 +606,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26" scale="large" weight="bold"/>
                                 </state>
                                 <connections>
-                                    <action selector="addToList:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="vGQ-pR-sld"/>
+                                    <segue destination="W2i-1z-vwY" kind="show" identifier="toFavorites" id="r0q-Gg-jZG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -730,7 +738,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ULUBIONE"/>
                                 <connections>
-                                    <segue destination="W2i-1z-vwY" kind="push" id="5Ko-ln-pyp"/>
+                                    <segue destination="W2i-1z-vwY" kind="push" identifier="toFavorites" id="5Ko-ln-pyp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOp-cm-CB2">
@@ -783,6 +791,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="leftClicked:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="rhD-mo-8Ql"/>
+                                    <segue destination="VG1-RF-b8b" kind="show" identifier="toListAll" id="f8o-Zy-wbK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bT-nm-zZq">
@@ -796,6 +805,7 @@
                                 </state>
                                 <connections>
                                     <action selector="rightClicked:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="ByP-aC-mYb"/>
+                                    <segue destination="p0O-Yl-St4" kind="show" identifier="toSearching" id="pCb-0Z-vyg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKw-dQ-wQH">
@@ -809,7 +819,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26" scale="large" weight="bold"/>
                                 </state>
                                 <connections>
-                                    <action selector="addToList:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="KA9-Mx-che"/>
+                                    <segue destination="W2i-1z-vwY" kind="show" identifier="toFavorites" id="tFQ-13-NbU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -851,7 +861,7 @@
                         <barButtonItem key="backBarButtonItem" title="Wróć" id="rgt-6T-dBe"/>
                         <barButtonItem key="rightBarButtonItem" image="gearshape.fill" catalog="system" id="q31-Im-tCg">
                             <connections>
-                                <segue destination="wfa-9p-LCc" kind="push" id="4eN-ce-Ilq"/>
+                                <segue destination="wfa-9p-LCc" kind="push" identifier="toSettings" id="4eN-ce-Ilq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -884,14 +894,14 @@
                                 <color key="sectionIndexBackgroundColor" name="Background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="xYV-gW-TFU" customClass="ListTableViewCell" customModule="Radosne_Wieczorki_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="41"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="41.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xYV-gW-TFU" id="eRd-aN-UYl">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="41.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hu0-JQ-UHx">
-                                                    <rect key="frame" x="10" y="10" width="394" height="21"/>
+                                                    <rect key="frame" x="10" y="10" width="394" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -929,6 +939,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="allGamesClicked:" destination="VG1-RF-b8b" eventType="touchUpInside" id="3zE-Fi-7ZX"/>
                                     <action selector="leftClicked:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="PBG-g0-6cB"/>
                                 </connections>
                             </button>
@@ -943,6 +954,7 @@
                                 </state>
                                 <connections>
                                     <action selector="rightClicked:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="bYL-QQ-sOV"/>
+                                    <segue destination="p0O-Yl-St4" kind="show" identifier="toSearching" id="5jR-p7-yxt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6k-lb-8Jy">
@@ -956,7 +968,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26" scale="large" weight="bold"/>
                                 </state>
                                 <connections>
-                                    <action selector="addToList:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="caj-s9-gFj"/>
+                                    <segue destination="W2i-1z-vwY" kind="show" identifier="toFavorites" id="uib-at-fFr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -983,7 +995,7 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="tS0-xr-Aix">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape.fill" catalog="system" id="PkU-Ro-Lxx">
                             <connections>
-                                <segue destination="wfa-9p-LCc" kind="show" id="G87-kf-dOo"/>
+                                <segue destination="wfa-9p-LCc" kind="show" identifier="toSettings" id="G87-kf-dOo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1182,7 +1194,7 @@
                         <barButtonItem key="backBarButtonItem" title="Wróć" id="tm4-bl-YVW"/>
                         <barButtonItem key="rightBarButtonItem" title="Ustawienia" image="gearshape.fill" catalog="system" id="TBy-mD-jI2">
                             <connections>
-                                <segue destination="wfa-9p-LCc" kind="push" id="VbE-7X-8tQ"/>
+                                <segue destination="wfa-9p-LCc" kind="push" identifier="toSettings" id="VbE-7X-8tQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1223,9 +1235,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xh7-bh-l7g"/>
-        <segue reference="Xxb-AC-n2m"/>
-        <segue reference="oh8-gC-6Zd"/>
+        <segue reference="Onr-jg-pe6"/>
+        <segue reference="f8o-Zy-wbK"/>
+        <segue reference="G87-kf-dOo"/>
+        <segue reference="uib-at-fFr"/>
+        <segue reference="5jR-p7-yxt"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.left" catalog="system" width="96" height="128"/>

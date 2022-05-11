@@ -145,12 +145,17 @@ extension DisplayFavorite: UITableViewDelegate, UITableViewDataSource
     
     override func prepare(for segue:UIStoryboardSegue, sender: Any?)
     {
-        if segue.identifier == "goToDisplay"
+        switch segue.identifier
         {
+        case "goToDisplay":
             let viewController = segue.destination as! DisplayController
             viewController.gameName = toSend
             viewController.categoryName = favoriteName
             viewController.isFavorite = true
+        case "toList":
+            let viewController = segue.destination as! ListController
+            viewController.txt = "all"
+        default: break
         }
     }
 }

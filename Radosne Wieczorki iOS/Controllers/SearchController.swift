@@ -80,9 +80,8 @@ class SearchController: UIViewController {
         else
         if toFind == nil || toFind == ""
         {
-            list.append("nr 2")
             self.tableView.reloadData()
-            //TODO wyświetl komunikat o uzupełnieniu wyszukiwania
+            Toast.showToast(message: "Pole wyszukiwania jest puste", controller: self)
         }
         else
         {
@@ -93,9 +92,16 @@ class SearchController: UIViewController {
             
         }
     }
-    func update()
+    
+    override func prepare(for segue:UIStoryboardSegue, sender: (Any)?)
     {
-        self.tableView.reloadData()
+        switch segue.identifier
+        {
+        case "toList":
+            let viewController = segue.destination as! ListController
+            viewController.txt = "all"
+        default: break
+        }
     }
     
 }
