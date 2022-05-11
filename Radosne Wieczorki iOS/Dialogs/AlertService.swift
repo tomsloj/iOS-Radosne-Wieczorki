@@ -32,6 +32,18 @@ class AlertService {
         //createNewListController.buttonAction = completion
         
         return createNewListController
+    }
+    
+    func displayAddNotesDialog (game: String?, completion: @escaping () -> Void) -> CreateNewListController
+    {
+        let storyboard = UIStoryboard(name: "CreateNewListStoryboard", bundle: .main)
+        
+        let createNewListController = storyboard.instantiateViewController(withIdentifier: "CreateNewListController" ) as! CreateNewListController
+        
+        createNewListController.buttonAction = completion
+        createNewListController.gameName = game
+        
+        return createNewListController
         
     }
     

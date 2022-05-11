@@ -269,7 +269,14 @@ class DisplayController: UIViewController {
     @objc
     func floatingButtonClicked(buttin:UIButton)
     {
-        print("tap")
+        let dialog = alertService.displayCreateNewListDialog(game: gameName)
+        {
+            //Toast.showToast(message: "update", controller: self)
+            //self.list = self.databaseFavorites.getFavoritesList()
+            //self.update()
+        }
+        
+        present(dialog, animated: true)
     }
     
     func loadYTPlayer()
