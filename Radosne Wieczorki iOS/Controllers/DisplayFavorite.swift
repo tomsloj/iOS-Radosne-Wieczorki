@@ -32,8 +32,6 @@ class DisplayFavorite: UIViewController, UIDocumentPickerDelegate {
         tableView.tableFooterView = UIView()
         
         list = self.databaseFavorites.getGamesInFavorite(name: favoriteName)
-        Toast.showToast(message: databaseFavorites.getJSON(favoriteListName: favoriteName), controller: self)
-//        let tmp = databaseFavorites.importJSON(json: databaseFavorites.getJSON(favoriteListName: favoriteName))
         fontSize = CGFloat(sService.getTextSize())
     }
     
@@ -55,8 +53,8 @@ class DisplayFavorite: UIViewController, UIDocumentPickerDelegate {
     @IBAction func exportClicker(_ sender: Any) {
         JSONString = databaseFavorites.getJSON(favoriteListName: favoriteName)
         let filePath = NSHomeDirectory() + "/Documents/test.json"
-        print("export")
-        print(filePath)
+//        print("export")
+//        print(filePath)
         
         let documentPicker =
             UIDocumentPickerViewController(forOpeningContentTypes: [.folder])
@@ -101,10 +99,6 @@ extension DisplayFavorite: UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-//        let databaeHelper:DataBaseHelper = DataBaseHelper()
-//
-//        let gamesArray = databaeHelper.getGamesInCategory(category: txt)
         
         let text = list[indexPath.row]
         

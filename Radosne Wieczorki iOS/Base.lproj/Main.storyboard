@@ -19,31 +19,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Uv-tv-ht6">
-                                <rect key="frame" x="8" y="130" width="398" height="34"/>
+                                <rect key="frame" x="8" y="120" width="398" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aMi-aZ-cG3">
-                                <rect key="frame" x="12" y="176" width="51" height="31"/>
+                                <rect key="frame" x="12" y="166" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Szukaj w tytułach" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e40-wa-3Zq">
-                                <rect key="frame" x="81" y="181" width="325" height="21"/>
+                                <rect key="frame" x="81" y="171" width="325" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2XX-zs-J9x">
-                                <rect key="frame" x="12" y="219" width="51" height="31"/>
+                                <rect key="frame" x="12" y="209" width="51" height="31"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwU-td-5kI">
-                                <rect key="frame" x="184.5" y="262" width="45" height="30"/>
+                                <rect key="frame" x="184.5" y="252" width="45" height="30"/>
                                 <state key="normal" title="Szukaj"/>
                                 <connections>
                                     <action selector="searchButtonClicked:" destination="p0O-Yl-St4" eventType="touchUpInside" id="nLc-1C-FIk"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kFo-rI-8Cv">
-                                <rect key="frame" x="8" y="300" width="398" height="526"/>
+                                <rect key="frame" x="8" y="290" width="398" height="536"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchCell" id="DkU-dk-vUO" customClass="SearchTableViewCell" customModule="Radosne_Wieczorki_iOS" customModuleProvider="target">
@@ -78,7 +78,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Szukaj w opisach" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpy-TC-ca7">
-                                <rect key="frame" x="81" y="224" width="325" height="21"/>
+                                <rect key="frame" x="81" y="214" width="325" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -129,6 +129,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="y7q-6D-GrV"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="kFo-rI-8Cv" firstAttribute="leading" secondItem="ose-sC-MdQ" secondAttribute="leading" constant="8" id="1pp-Oy-I7R"/>
@@ -136,7 +137,7 @@
                             <constraint firstAttribute="trailing" secondItem="1Uv-tv-ht6" secondAttribute="trailing" constant="8" id="3g8-ta-kY7"/>
                             <constraint firstItem="e40-wa-3Zq" firstAttribute="centerY" secondItem="aMi-aZ-cG3" secondAttribute="centerY" id="4SD-cY-KJx"/>
                             <constraint firstItem="xgE-Qz-DeA" firstAttribute="top" secondItem="kFo-rI-8Cv" secondAttribute="bottom" id="4W2-BG-Idz"/>
-                            <constraint firstItem="1Uv-tv-ht6" firstAttribute="top" secondItem="ose-sC-MdQ" secondAttribute="top" constant="130" id="4Zg-y3-d4C"/>
+                            <constraint firstItem="1Uv-tv-ht6" firstAttribute="top" secondItem="ose-sC-MdQ" secondAttribute="top" constant="120" id="4Zg-y3-d4C"/>
                             <constraint firstItem="Hpy-TC-ca7" firstAttribute="centerY" secondItem="2XX-zs-J9x" secondAttribute="centerY" id="4wF-1h-ETh"/>
                             <constraint firstAttribute="bottom" secondItem="cls-2V-lgH" secondAttribute="bottom" id="6bu-wH-dmn"/>
                             <constraint firstAttribute="trailing" secondItem="e40-wa-3Zq" secondAttribute="trailing" constant="8" id="9Gm-yq-hLG"/>
@@ -200,14 +201,14 @@
                                 <color key="sectionIndexBackgroundColor" name="Background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listOfFavoritesCell" id="FPu-kz-xoO" customClass="ListOfFavoritesCell" customModule="Radosne_Wieczorki_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FPu-kz-xoO" id="1jk-Hu-UrA">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="nameOfFavorite" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJr-ov-qAI">
-                                                    <rect key="frame" x="15" y="11" width="384" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="384" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -231,14 +232,6 @@
                                     <outlet property="delegate" destination="W2i-1z-vwY" id="CNe-BO-npi"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsz-N9-jS9">
-                                <rect key="frame" x="136" y="625" width="102" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create new list"/>
-                                <connections>
-                                    <action selector="createNewFavoriteClicked:" destination="W2i-1z-vwY" eventType="touchUpInside" id="dca-ZV-UFj"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWN-6b-cgM">
                                 <rect key="frame" x="257" y="826" width="157" height="70"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
@@ -265,6 +258,7 @@
                                 </state>
                                 <connections>
                                     <action selector="addToList:" destination="Hbf-00-Ei1" eventType="touchUpInside" id="ZQL-ZR-6f6"/>
+                                    <action selector="createNewFavoriteClicked:" destination="W2i-1z-vwY" eventType="touchUpInside" id="a3e-Vm-EFN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwc-Ei-bY9">
@@ -309,11 +303,6 @@
                     <navigationItem key="navigationItem" title="Listy" id="9Xl-px-0fz">
                         <barButtonItem key="backBarButtonItem" title="Wróć" id="HWv-nr-0ew"/>
                         <rightBarButtonItems>
-                            <barButtonItem title="Stwórz listę" image="plus.app.fill" catalog="system" id="bMT-Wp-NHh">
-                                <connections>
-                                    <action selector="createNewFavoriteClicked:" destination="W2i-1z-vwY" id="2RW-Y9-6KY"/>
-                                </connections>
-                            </barButtonItem>
                             <barButtonItem title="Import" image="square.and.arrow.down.fill" catalog="system" id="NPy-dn-rQf">
                                 <connections>
                                     <action selector="importClicked:" destination="W2i-1z-vwY" id="d6s-ho-xGJ"/>
@@ -349,14 +338,14 @@
                                 <color key="sectionIndexBackgroundColor" name="Background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DisplayFavoriteCell" id="F5T-JK-aBa" customClass="DisplayFavoriteCell" customModule="Radosne_Wieczorki_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F5T-JK-aBa" id="X5J-tj-YzI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="nameOfGame" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQa-g5-zfe">
-                                                    <rect key="frame" x="15" y="11" width="384" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="384" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -485,13 +474,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wielkość tekstu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqI-AD-KJr">
-                                <rect key="frame" x="16" y="139.5" width="147" height="21"/>
+                                <rect key="frame" x="16" y="129.5" width="147" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyd-DT-27k">
-                                <rect key="frame" x="342" y="130" width="40" height="40"/>
+                                <rect key="frame" x="342" y="120" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="HAB-sY-nEB"/>
                                     <constraint firstAttribute="height" constant="40" id="g6O-fa-yoJ"/>
@@ -505,7 +494,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iv9-Zk-KcS">
-                                <rect key="frame" x="278" y="130" width="40" height="40"/>
+                                <rect key="frame" x="278" y="120" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="6pe-CB-Aqy"/>
                                     <constraint firstAttribute="width" constant="40" id="f2m-UH-mFA"/>
@@ -521,25 +510,25 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tryb ciemny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="379-sz-wxd">
-                                <rect key="frame" x="16" y="215" width="93" height="21"/>
+                                <rect key="frame" x="16" y="205" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vLk-V0-fgO">
-                                <rect key="frame" x="333" y="210" width="51" height="31"/>
+                                <rect key="frame" x="333" y="200" width="51" height="31"/>
                                 <connections>
                                     <action selector="darkModeStateChanged:" destination="wfa-9p-LCc" eventType="valueChanged" id="ILG-WU-QcJ"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wyślij uwagi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5I-BX-xBU">
-                                <rect key="frame" x="16" y="282.5" width="93.5" height="21"/>
+                                <rect key="frame" x="16" y="272.5" width="93.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfV-s1-QuB">
-                                <rect key="frame" x="342" y="273" width="40" height="40"/>
+                                <rect key="frame" x="342" y="263" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Mbn-XU-int"/>
                                     <constraint firstAttribute="height" constant="40" id="g74-dx-TxF"/>
@@ -610,6 +599,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="8CT-x4-CNX"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="wmm-Z7-kPo" firstAttribute="leading" secondItem="j5I-BX-xBU" secondAttribute="leading" id="2VQ-mg-Z4S"/>
@@ -619,7 +609,7 @@
                             <constraint firstItem="HfV-s1-QuB" firstAttribute="top" secondItem="vLk-V0-fgO" secondAttribute="bottom" constant="32" id="DJ6-V8-FhX"/>
                             <constraint firstItem="HfV-s1-QuB" firstAttribute="centerY" secondItem="j5I-BX-xBU" secondAttribute="centerY" id="DoR-vn-wpt"/>
                             <constraint firstItem="vLk-V0-fgO" firstAttribute="trailing" secondItem="Lyd-DT-27k" secondAttribute="trailing" id="E2j-9b-UC6"/>
-                            <constraint firstItem="Iv9-Zk-KcS" firstAttribute="top" secondItem="EyB-S4-nt6" secondAttribute="top" constant="130" id="G0q-RI-AUo"/>
+                            <constraint firstItem="Iv9-Zk-KcS" firstAttribute="top" secondItem="EyB-S4-nt6" secondAttribute="top" constant="120" id="G0q-RI-AUo"/>
                             <constraint firstItem="AXT-D9-wpA" firstAttribute="height" secondItem="0Vx-8j-FNa" secondAttribute="height" constant="8" id="Ldi-ry-76i"/>
                             <constraint firstItem="HfV-s1-QuB" firstAttribute="trailing" secondItem="vLk-V0-fgO" secondAttribute="trailing" id="OkL-4m-Y5A"/>
                             <constraint firstAttribute="trailing" secondItem="Lyd-DT-27k" secondAttribute="trailing" constant="32" id="PrC-29-547"/>
@@ -664,7 +654,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6u-FL-u8i">
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6u-FL-u8i">
                                 <rect key="frame" x="24" y="114" width="175" height="125"/>
                                 <color key="backgroundColor" name="Color1"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -674,22 +664,26 @@
                                     <constraint firstAttribute="width" secondItem="W6u-FL-u8i" secondAttribute="height" multiplier="140:100" id="1mi-B8-fHd"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-112" maxY="-78"/>
-                                <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="40" maxY="10"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="40" maxY="10"/>
                                 <state key="normal" title="TAŃCE" image="tance"/>
+                                <buttonConfiguration key="configuration" style="plain" image="tance" imagePlacement="top" title="TAŃCE" imagePadding="4">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="danceClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XBV-6o-pvY"/>
                                     <segue destination="VG1-RF-b8b" kind="push" identifier="toList" id="9gW-sO-0rF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMs-4D-uQ7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMs-4D-uQ7">
                                 <rect key="frame" x="24" y="263" width="175" height="125"/>
                                 <color key="backgroundColor" name="Color3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cMs-4D-uQ7" secondAttribute="height" multiplier="140:100" id="a3o-dS-Ptt"/>
                                 </constraints>
                                 <state key="normal" title="INTEGRACYJNE" image="integracja"/>
+                                <buttonConfiguration key="configuration" style="plain" image="integracja" imagePlacement="top" title="INTEGRACYJNE" imagePadding="4">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="danceClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kAH-n0-JNo"/>
                                     <segue destination="VG1-RF-b8b" kind="push" identifier="toList" id="Xxb-AC-n2m"/>
@@ -702,13 +696,15 @@
                                     <constraint firstAttribute="width" secondItem="5Ij-2I-7MX" secondAttribute="height" multiplier="140:100" id="y9g-dD-YM9"/>
                                 </constraints>
                                 <state key="normal" title="PIOSENKI" image="piosenki"/>
-                                <buttonConfiguration key="configuration" style="plain" image="piosenki" imagePlacement="top" title="PIOSENKI" cornerStyle="fixed"/>
+                                <buttonConfiguration key="configuration" style="plain" image="piosenki" imagePlacement="top" title="PIOSENKI" imagePadding="6" cornerStyle="fixed">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="danceClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HYw-9y-X4I"/>
                                     <segue destination="VG1-RF-b8b" kind="push" identifier="toList" id="Q7I-Qh-5Nr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tb2-Sl-Pcg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tb2-Sl-Pcg">
                                 <rect key="frame" x="24" y="412" width="175" height="125"/>
                                 <color key="backgroundColor" name="Color5"/>
                                 <constraints>
@@ -716,6 +712,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="REFLEKS" image="refleks"/>
+                                <buttonConfiguration key="configuration" style="plain" image="refleks" imagePlacement="top" title="REFLEKS">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="danceClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="adN-ey-KNm"/>
                                     <segue destination="VG1-RF-b8b" kind="push" identifier="toList" id="JeM-G3-TMb"/>
@@ -723,54 +722,36 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLy-M2-4L0">
                                 <rect key="frame" x="223" y="412" width="175" height="125"/>
-                                <color key="backgroundColor" name="Color6"/>
+                                <color key="backgroundColor" name="Color5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NLy-M2-4L0" secondAttribute="height" multiplier="140:100" id="kZe-mz-vob"/>
                                 </constraints>
-                                <state key="normal" title="SPRAWNOŚCIOWE" image="sprawnosc"/>
+                                <state key="normal" title="SPRAWNOŚCIOWE" image="output-onlinepngtools"/>
+                                <buttonConfiguration key="configuration" style="plain" image="sprawnosc" imagePlacement="top" title="SPRAWNOŚCIOWE" imagePadding="6">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="11" scale="small" weight="thin"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="danceClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Vz-gl-9dW"/>
                                     <segue destination="VG1-RF-b8b" kind="push" identifier="toList" id="Qa8-fP-31F"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4j-lj-nKO">
-                                <rect key="frame" x="139" y="553" width="105" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ULUBIONE"/>
-                                <connections>
-                                    <segue destination="W2i-1z-vwY" kind="push" identifier="toFavorites" id="5Ko-ln-pyp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOp-cm-CB2">
-                                <rect key="frame" x="20" y="553" width="100" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SZUKAJ"/>
-                                <connections>
-                                    <segue destination="p0O-Yl-St4" kind="push" identifier="toSearching" id="Mu3-TV-yEl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egn-Ru-YMx">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egn-Ru-YMx">
                                 <rect key="frame" x="223" y="114" width="175" height="125"/>
                                 <color key="backgroundColor" name="Color2"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="egn-Ru-YMx" secondAttribute="height" multiplier="140:100" id="3v9-Z3-wcO"/>
                                 </constraints>
                                 <state key="normal" title="RYWALIZACJA" image="rywalizacja">
-                                    <color key="titleColor" red="0.0092767453079475662" green="0.053574602622357921" blue="0.5756260265003551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="ultraLight"/>
                                 </state>
+                                <buttonConfiguration key="configuration" style="plain" image="rywalizacja" imagePlacement="top" title="RYWALIZACJA" imagePadding="4">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="small" weight="ultraLight"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="danceClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kDd-xr-50j"/>
                                     <segue destination="VG1-RF-b8b" kind="push" identifier="toList" id="9ev-XR-wHo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m93-9a-I9H">
-                                <rect key="frame" x="261" y="553" width="124" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="WSZYSTKIE"/>
-                                <connections>
-                                    <action selector="danceClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tax-rS-ZaW"/>
-                                    <segue destination="VG1-RF-b8b" kind="push" identifier="toList" id="m9C-CD-o4Z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtA-Ib-eio">
@@ -823,6 +804,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xtz-eb-hkc"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="W6u-FL-u8i" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="114" id="0vO-pg-CQt"/>
@@ -873,7 +855,6 @@
                         <outlet property="integrationButton" destination="cMs-4D-uQ7" id="XvR-cZ-xn0"/>
                         <outlet property="perceptivityButton" destination="Tb2-Sl-Pcg" id="Ivb-GA-Qzf"/>
                         <outlet property="songsButton" destination="5Ij-2I-7MX" id="02c-sZ-Xbp"/>
-                        <outlet property="wholeListButton" destination="m93-9a-I9H" id="9WQ-DT-5ih"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1235,34 +1216,34 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Onr-jg-pe6"/>
-        <segue reference="f8o-Zy-wbK"/>
-        <segue reference="G87-kf-dOo"/>
-        <segue reference="uib-at-fFr"/>
-        <segue reference="5jR-p7-yxt"/>
+        <segue reference="xh7-bh-l7g"/>
+        <segue reference="9gW-sO-0rF"/>
+        <segue reference="4eN-ce-Ilq"/>
+        <segue reference="tFQ-13-NbU"/>
+        <segue reference="pCb-0Z-vyg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="ezgif.com-gif-maker" width="686" height="653"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
-        <image name="integracja" width="451.72100830078125" height="451.72100830078125"/>
+        <image name="integracja" width="85.333335876464844" height="85.333335876464844"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="minus" catalog="system" width="128" height="24"/>
         <image name="minus.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="piosenki" width="61.48699951171875" height="61.48699951171875"/>
+        <image name="output-onlinepngtools" width="64" height="64"/>
+        <image name="piosenki" width="85.333335876464844" height="85.333335876464844"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="plus.app.fill" catalog="system" width="128" height="114"/>
         <image name="plus.square.fill" catalog="system" width="128" height="114"/>
         <image name="red" width="50" height="50"/>
-        <image name="refleks" width="512" height="512"/>
-        <image name="rywalizacja" width="490.052001953125" height="490.052001953125"/>
-        <image name="sprawnosc" width="494.17498779296875" height="494.17498779296875"/>
+        <image name="refleks" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="rywalizacja" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="sprawnosc" width="85.333335876464844" height="85.333335876464844"/>
         <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
-        <image name="tance" width="312.57000732421875" height="312.57000732421875"/>
+        <image name="tance" width="85.333335876464844" height="85.333335876464844"/>
         <image name="trash.fill" catalog="system" width="121" height="128"/>
         <namedColor name="Background">
             <color red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1281,9 +1262,6 @@
         </namedColor>
         <namedColor name="Color5">
             <color red="0.20392156862745098" green="0.72941176470588232" blue="0.22352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Color6">
-            <color red="0.11764705882352941" green="0.68235294117647061" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Yellow">
             <color red="1" green="0.8666666666666667" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

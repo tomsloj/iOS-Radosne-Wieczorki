@@ -20,7 +20,33 @@ class AlertService {
         createNewListController.gameName = game
         
         return createNewListController
+    }
+    
+    func displaySelectFavoriteListDialog (game: String?, parent: UIViewController, completion: @escaping () -> Void) -> SelectFavoriteListController
+    {
+        let storyboard = UIStoryboard(name: "SelectFavoriteListDialog", bundle: .main)
         
+        let selectFavoriteListController = storyboard.instantiateViewController(withIdentifier: "SelectFavoriteListController" ) as! SelectFavoriteListController
+        
+        selectFavoriteListController.buttonAction = completion
+        selectFavoriteListController.gameName = game
+        selectFavoriteListController.parentController = parent
+        
+        return selectFavoriteListController
+    }
+    
+    func displayNotesDialog (game: String?, listName: String?, parent: UIViewController, completion: @escaping () -> Void) -> SelectFavoriteListController
+    {
+        let storyboard = UIStoryboard(name: "NotesDialog", bundle: .main)
+        
+        let notesController = storyboard.instantiateViewController(withIdentifier: "NotesStoryboard" ) as! SelectFavoriteListController
+        
+        notesController.buttonAction = completion
+        notesController.gameName = game
+        notesController.listName = listName
+        notesController.parentController = parent
+        
+        return notesController
     }
     
     func displayAddToFavoritesDialog (completion: @escaping () -> Void) -> AddToFavoritesController

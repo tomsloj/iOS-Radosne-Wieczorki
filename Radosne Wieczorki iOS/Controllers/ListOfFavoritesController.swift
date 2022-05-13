@@ -58,9 +58,6 @@ class ListOfFavoritesController: UIViewController, UIDocumentPickerDelegate {
         dialog.tableView = tableView
         
         present(dialog, animated: true)
-        
-        Toast.showToast(message: "dialog", controller: self)
-        
     }
     @IBAction func importClicked(_ sender: Any) {
         let types = UTType.types(tag: "json", tagClass: UTTagClass.filenameExtension, conformingTo: nil)

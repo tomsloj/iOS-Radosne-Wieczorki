@@ -94,14 +94,9 @@ class DisplayController: UIViewController {
     }
     
     @IBAction func addToList(_ sender: Any) {
-        let dialog = alertService.displayCreateNewListDialog(game: gameName)
+        let dialog = alertService.displaySelectFavoriteListDialog(game: gameName, parent: self)
         {
-            //Toast.showToast(message: "update", controller: self)
-            //self.list = self.databaseFavorites.getFavoritesList()
-            //self.update()
         }
-        
-        //dialog.tableView = tableView
         
         present(dialog, animated: true)
     }
@@ -151,6 +146,7 @@ class DisplayController: UIViewController {
             if gameNumber - 1 >= 0
             {
                 gameName = databaseFavorite.gameFromNumber(number: gameNumber - 1, name: categoryName!)
+                titleLabel.text = gameName
                 categoryLabel.text = databaseHelper.getCategory(game: gameName ?? "")
                 textLabel.text = databaseHelper.getText(game: gameName ?? "")
                 updateLeftRightButtons()
@@ -202,9 +198,10 @@ class DisplayController: UIViewController {
         {
             let gamesCount = databaseFavorite.maxNumber(name: categoryName!)
             let gameNumber = databaseFavorite.numberOfGame(name: categoryName!, game: gameName!)
-            if gameNumber + 1 < gamesCount
+            if gameNumber + 1 <= gamesCount
             {
                 gameName = databaseFavorite.gameFromNumber(number: gameNumber + 1, name: categoryName!)
+                titleLabel.text = gameName
                 categoryLabel.text = databaseHelper.getCategory(game: gameName ?? "")
                 textLabel.text = databaseHelper.getText(game: gameName ?? "")
                 updateLeftRightButtons()
@@ -227,7 +224,7 @@ class DisplayController: UIViewController {
         {
             let gamesCount = databaseFavorite.maxNumber(name: categoryName!)
             let gameNumber = databaseFavorite.numberOfGame(name: categoryName!, game: gameName!)
-            if gameNumber == 0
+            if gameNumber <= 1
             {
                 leftButton.isEnabled = false
             }
@@ -235,7 +232,7 @@ class DisplayController: UIViewController {
             {
                 leftButton.isEnabled = true
             }
-            if gameNumber != gamesCount - 1
+            if gameNumber >= gamesCount
             {
                 rightButton.isEnabled = false
             }

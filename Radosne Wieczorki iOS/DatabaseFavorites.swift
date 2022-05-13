@@ -139,7 +139,7 @@ class DatabaseFavorites
             print("failure binding number: \(errmsg)")
         }
     
-        if sqlite3_bind_text(statement, 3, "", -1, SQLITE_TRANSIENT) != SQLITE_OK
+        if sqlite3_bind_text(statement, 4, "", -1, SQLITE_TRANSIENT) != SQLITE_OK
         {
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("failure binding notes: \(errmsg)")
@@ -188,9 +188,12 @@ class DatabaseFavorites
         if sqlite3_step(statement) == SQLITE_ROW
         {
             let resultColumn = sqlite3_column_text(statement, 0)
+            let gameName = String(cString: resultColumn!)
             sqlite3_finalize(statement)
             statement = nil
-            return String(cString: resultColumn!)
+            return gameName
+            
+//            return String(cString: resultColumn!)
         }
         else
         {
