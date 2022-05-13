@@ -29,6 +29,8 @@
 		CE8668F3282D739E00B5A4B8 /* SelectFavoriteListDialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8668F2282D739E00B5A4B8 /* SelectFavoriteListDialog.storyboard */; };
 		CE8668F6282E754C00B5A4B8 /* NotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8668F4282E754A00B5A4B8 /* NotesController.swift */; };
 		CE8668F7282E754C00B5A4B8 /* NotesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8668F5282E754B00B5A4B8 /* NotesStoryboard.storyboard */; };
+		CE8668FA282EA13B00B5A4B8 /* NewGameDialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8668F8282EA13B00B5A4B8 /* NewGameDialog.storyboard */; };
+		CE8668FB282EA13B00B5A4B8 /* NewGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8668F9282EA13B00B5A4B8 /* NewGameController.swift */; };
 		CE9620632343D93800469796 /* DisplayFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9620622343D93800469796 /* DisplayFavorite.swift */; };
 		CE9620652343DD6700469796 /* DisplayFavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9620642343DD6700469796 /* DisplayFavoriteCell.swift */; };
 		CEC8D17123199B8400247D86 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8D17023199B8400247D86 /* ListController.swift */; };
@@ -106,6 +108,8 @@
 		CE8668F2282D739E00B5A4B8 /* SelectFavoriteListDialog.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectFavoriteListDialog.storyboard; sourceTree = "<group>"; };
 		CE8668F4282E754A00B5A4B8 /* NotesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesController.swift; sourceTree = "<group>"; };
 		CE8668F5282E754B00B5A4B8 /* NotesStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NotesStoryboard.storyboard; sourceTree = "<group>"; };
+		CE8668F8282EA13B00B5A4B8 /* NewGameDialog.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewGameDialog.storyboard; sourceTree = "<group>"; };
+		CE8668F9282EA13B00B5A4B8 /* NewGameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGameController.swift; sourceTree = "<group>"; };
 		CE9620622343D93800469796 /* DisplayFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayFavorite.swift; sourceTree = "<group>"; };
 		CE9620642343DD6700469796 /* DisplayFavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayFavoriteCell.swift; sourceTree = "<group>"; };
 		CEC8D17023199B8400247D86 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 		CE0947A0234241C900AAFE70 /* Dialogs */ = {
 			isa = PBXGroup;
 			children = (
+				CE8668F9282EA13B00B5A4B8 /* NewGameController.swift */,
+				CE8668F8282EA13B00B5A4B8 /* NewGameDialog.storyboard */,
 				CE8668F4282E754A00B5A4B8 /* NotesController.swift */,
 				CE8668F5282E754B00B5A4B8 /* NotesStoryboard.storyboard */,
 				CE8668F2282D739E00B5A4B8 /* SelectFavoriteListDialog.storyboard */,
@@ -459,6 +465,7 @@
 				CEE6ED5624E88B3C00B780E9 /* tło_lauch_screen3.png in Resources */,
 				CE3C9C11233159B6006D02E8 /* baza.sqlite in Resources */,
 				CEDFBDC8231299A50031B5EE /* Assets.xcassets in Resources */,
+				CE8668FA282EA13B00B5A4B8 /* NewGameDialog.storyboard in Resources */,
 				CEE6ED5424E87AEB00B780E9 /* integracja.svg in Resources */,
 				CE0947A2234241FB00AAFE70 /* CreateNewListStoryboard.storyboard in Resources */,
 				CEDFBDC6231299A50031B5EE /* Main.storyboard in Resources */,
@@ -616,6 +623,7 @@
 				CE3C9C1523315B2A006D02E8 /* SearchController.swift in Sources */,
 				CEFC9B2F231A6DA00073C344 /* GamesArray.swift in Sources */,
 				CEC8D17123199B8400247D86 /* ListController.swift in Sources */,
+				CE8668FB282EA13B00B5A4B8 /* NewGameController.swift in Sources */,
 				CE145DA923415CC60032C97C /* Toast.swift in Sources */,
 				CE3988D3231E69EE006EC963 /* SettingsService.swift in Sources */,
 				CE0947A623424E3200AAFE70 /* AlertService.swift in Sources */,

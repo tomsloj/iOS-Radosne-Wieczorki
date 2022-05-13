@@ -35,11 +35,11 @@ class AlertService {
         return selectFavoriteListController
     }
     
-    func displayNotesDialog (game: String?, listName: String?, parent: UIViewController, completion: @escaping () -> Void) -> SelectFavoriteListController
+    func displayNotesDialog (game: String?, listName: String?, parent: UIViewController, completion: @escaping () -> Void) -> NotesController
     {
-        let storyboard = UIStoryboard(name: "NotesDialog", bundle: .main)
+        let storyboard = UIStoryboard(name: "NotesStoryboard", bundle: .main)
         
-        let notesController = storyboard.instantiateViewController(withIdentifier: "NotesStoryboard" ) as! SelectFavoriteListController
+        let notesController = storyboard.instantiateViewController(withIdentifier: "NotesStoryboard" ) as! NotesController
         
         notesController.buttonAction = completion
         notesController.gameName = game
@@ -47,6 +47,17 @@ class AlertService {
         notesController.parentController = parent
         
         return notesController
+    }
+    
+    func displayNewGameDialog (parent: UIViewController, completion: @escaping () -> Void) -> NewGameController
+    {
+        let storyboard = UIStoryboard(name: "NewGameDialog", bundle: .main)
+        
+        let newGameDialog = storyboard.instantiateViewController(withIdentifier: "NewGameDialog" ) as! NewGameController
+        
+        newGameDialog.parentController = parent
+        
+        return newGameDialog
     }
     
     func displayAddToFavoritesDialog (completion: @escaping () -> Void) -> AddToFavoritesController

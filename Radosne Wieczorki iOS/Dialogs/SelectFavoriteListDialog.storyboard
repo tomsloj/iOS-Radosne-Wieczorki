@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D9o-Z1-bYn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select Favorite List Controller-->
+        <scene sceneID="TLI-Rc-iC3">
+            <objects>
+                <viewController storyboardIdentifier="SelectFavoriteListController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="D9o-Z1-bYn" customClass="SelectFavoriteListController" customModule="Radosne_Wieczorki_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B1x-qt-chR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcP-zw-gMn">
+                                <rect key="frame" x="57" y="268" width="300" height="360"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wybierz listę do której dodać zabawę" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5km-3n-bRO">
+                                        <rect key="frame" x="8" y="8" width="284" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LOo-47-huV">
+                                        <rect key="frame" x="8" y="200" width="284" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="547-pu-rmO">
+                                        <rect key="frame" x="8" y="305" width="284" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0t-vb-oAI">
+                                                <rect key="frame" x="0.0" y="0.0" width="134" height="31"/>
+                                                <state key="normal" title="Wybierz listę"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Wybierz listę"/>
+                                                <connections>
+                                                    <action selector="accept:" destination="D9o-Z1-bYn" eventType="touchUpInside" id="5bT-Qq-VaT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UR-eg-BZd">
+                                                <rect key="frame" x="150" y="0.0" width="134" height="31"/>
+                                                <state key="normal" title="Anuluj">
+                                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                                </state>
+                                                <buttonConfiguration key="configuration" style="gray" title="Anuluj">
+                                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="cancel:" destination="D9o-Z1-bYn" eventType="touchUpInside" id="JBf-st-y9t"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJ7-ZH-NL7">
+                                        <rect key="frame" x="8" y="254" width="284" height="31"/>
+                                        <color key="tintColor" systemColor="linkColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Stwórz nową listę"/>
+                                        <connections>
+                                            <action selector="createNewList:" destination="D9o-Z1-bYn" eventType="touchUpInside" id="7V1-s0-AeQ"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lub podaj nazwę nowej listy do stworzenia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RH-Qs-M63">
+                                        <rect key="frame" x="8" y="139" width="284" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moU-e5-vvg">
+                                        <rect key="frame" x="8" y="76" width="284" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Wybierz listę"/>
+                                        <connections>
+                                            <action selector="selectListClicked:" destination="D9o-Z1-bYn" eventType="touchUpInside" id="Q7y-Gi-oDF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="AJ7-ZH-NL7" secondAttribute="trailing" constant="8" id="2K7-XN-p9Q"/>
+                                    <constraint firstItem="547-pu-rmO" firstAttribute="top" secondItem="AJ7-ZH-NL7" secondAttribute="bottom" constant="20" id="2gv-HU-DyB"/>
+                                    <constraint firstItem="547-pu-rmO" firstAttribute="leading" secondItem="pcP-zw-gMn" secondAttribute="leadingMargin" id="4gR-dM-M5y"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="547-pu-rmO" secondAttribute="trailing" id="5oK-JN-eEM"/>
+                                    <constraint firstAttribute="trailing" secondItem="LOo-47-huV" secondAttribute="trailing" constant="8" id="ENo-1q-FS6"/>
+                                    <constraint firstItem="LOo-47-huV" firstAttribute="top" secondItem="9RH-Qs-M63" secondAttribute="bottom" constant="20" id="Eoy-mw-xLU"/>
+                                    <constraint firstItem="AJ7-ZH-NL7" firstAttribute="leading" secondItem="pcP-zw-gMn" secondAttribute="leading" constant="8" id="Ff9-9q-udj"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="547-pu-rmO" secondAttribute="bottom" constant="16" id="GLu-gq-Dxo"/>
+                                    <constraint firstAttribute="trailing" secondItem="moU-e5-vvg" secondAttribute="trailing" constant="8" id="H5M-W4-K0Q"/>
+                                    <constraint firstItem="moU-e5-vvg" firstAttribute="top" secondItem="5km-3n-bRO" secondAttribute="bottom" constant="20" id="JNp-6v-Iko"/>
+                                    <constraint firstAttribute="trailing" secondItem="9RH-Qs-M63" secondAttribute="trailing" constant="8" id="Kf5-Fs-XR6"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="5km-3n-bRO" secondAttribute="trailing" id="O6M-sf-6i9"/>
+                                    <constraint firstItem="LOo-47-huV" firstAttribute="leading" secondItem="pcP-zw-gMn" secondAttribute="leading" constant="8" id="XQI-wT-Nqp"/>
+                                    <constraint firstItem="AJ7-ZH-NL7" firstAttribute="top" secondItem="LOo-47-huV" secondAttribute="bottom" constant="20" id="aQl-ID-obK"/>
+                                    <constraint firstItem="9RH-Qs-M63" firstAttribute="leading" secondItem="pcP-zw-gMn" secondAttribute="leading" constant="8" id="crs-ol-tId"/>
+                                    <constraint firstItem="5km-3n-bRO" firstAttribute="top" secondItem="pcP-zw-gMn" secondAttribute="topMargin" id="cyn-rF-KRj"/>
+                                    <constraint firstItem="moU-e5-vvg" firstAttribute="leading" secondItem="pcP-zw-gMn" secondAttribute="leading" constant="8" id="d7p-bu-VZI"/>
+                                    <constraint firstAttribute="width" constant="300" id="n6b-LG-W6b"/>
+                                    <constraint firstItem="9RH-Qs-M63" firstAttribute="top" secondItem="moU-e5-vvg" secondAttribute="bottom" constant="32" id="yTl-R4-dsP"/>
+                                    <constraint firstItem="5km-3n-bRO" firstAttribute="leading" secondItem="pcP-zw-gMn" secondAttribute="leadingMargin" id="z2h-66-kri"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lYp-I5-i66"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.2286226455479452" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pcP-zw-gMn" firstAttribute="centerY" secondItem="B1x-qt-chR" secondAttribute="centerY" id="QqX-V8-7jM"/>
+                            <constraint firstItem="pcP-zw-gMn" firstAttribute="centerX" secondItem="B1x-qt-chR" secondAttribute="centerX" id="dFX-s3-Zs2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dropdownButton" destination="moU-e5-vvg" id="wZE-wo-aHP"/>
+                        <outlet property="nameOfList" destination="LOo-47-huV" id="5No-RP-9ju"/>
+                        <outlet property="title1" destination="5km-3n-bRO" id="4rC-Jb-FPC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZz-4O-3ya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234.78260869565219" y="140.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

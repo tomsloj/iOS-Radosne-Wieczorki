@@ -484,16 +484,14 @@ class DatabaseFavorites
         if sqlite3_step(statement) == SQLITE_ROW
         {
             let notes = sqlite3_column_text(statement, 0)
-            sqlite3_finalize(statement)
-            statement = nil
+            var notesString = ""
             if notes != nil
             {
-                return String(cString:notes!)
+                notesString = String(cString:notes!)
             }
-            else
-            {
-                return ""
-            }
+            sqlite3_finalize(statement)
+            statement = nil
+            return notesString
             
         }
         else
@@ -506,7 +504,7 @@ class DatabaseFavorites
     {
         var statement: OpaquePointer?
     
-        if sqlite3_prepare_v2(db, "UPDATE \(tableName) SET notes = '\(notes) WHERE name = '\(playlist)' AND game = '\(game)'", -1, &statement, nil) == SQLITE_OK
+        if sqlite3_prepare_v2(db, "UPDATE \(tableName) SET notes = '\(notes)' WHERE name = '\(playlist)' AND game = '\(game)'", -1, &statement, nil) == SQLITE_OK
         {
             if sqlite3_step(statement) == SQLITE_DONE
             {

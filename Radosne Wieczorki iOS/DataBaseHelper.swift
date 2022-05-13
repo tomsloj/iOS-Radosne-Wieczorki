@@ -65,7 +65,7 @@ class DataBaseHelper
         }
     }
     
-    func addGame(category:String, game:String, text:String)
+    func addGame(category:String, game:String, text:String) -> Bool
     {
         var statement: OpaquePointer?
         
@@ -75,33 +75,38 @@ class DataBaseHelper
         {
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("error preparing insert: \(errmsg)")
+            return false
         }
         
         if sqlite3_bind_text(statement, 1, game, -1, SQLITE_TRANSIENT) != SQLITE_OK
         {
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("failure binding name: \(errmsg)")
+            return false
         }
         
         if sqlite3_bind_text(statement, 2, category, -1, SQLITE_TRANSIENT) != SQLITE_OK
         {
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("failure binding name: \(errmsg)")
+            return false
         }
         
-        if sqlite3_bind_text(statement, 1, text, -1, SQLITE_TRANSIENT) != SQLITE_OK
+        if sqlite3_bind_text(statement, 3, text, -1, SQLITE_TRANSIENT) != SQLITE_OK
         {
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("failure binding name: \(errmsg)")
+            return false
         }
         
         if sqlite3_step(statement) != SQLITE_DONE
         {
             let errmsg = String(cString: sqlite3_errmsg(db)!)
             print("failure inserting foo: \(errmsg)")
+            return false
         }
         sqlite3_finalize(statement)
-        
+        return true
     }
     
     func getGamesInCategory(category:String)->[String]

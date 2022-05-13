@@ -266,12 +266,7 @@ class DisplayController: UIViewController {
     @objc
     func floatingButtonClicked(buttin:UIButton)
     {
-        let dialog = alertService.displayCreateNewListDialog(game: gameName)
-        {
-            //Toast.showToast(message: "update", controller: self)
-            //self.list = self.databaseFavorites.getFavoritesList()
-            //self.update()
-        }
+        let dialog = alertService.displayNotesDialog(game: gameName, listName: categoryName, parent: self){}
         
         present(dialog, animated: true)
     }

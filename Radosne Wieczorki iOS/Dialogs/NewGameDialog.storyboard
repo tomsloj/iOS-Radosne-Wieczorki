@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D9o-Z1-bYn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Game Controller-->
+        <scene sceneID="TLI-Rc-iC3">
+            <objects>
+                <viewController storyboardIdentifier="NewGameDialog" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="D9o-Z1-bYn" customClass="NewGameController" customModule="Radosne_Wieczorki_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B1x-qt-chR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcP-zw-gMn">
+                                <rect key="frame" x="67" y="267.5" width="280" height="361.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dodawanie zabawy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5km-3n-bRO">
+                                        <rect key="frame" x="8" y="8" width="264" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LOo-47-huV">
+                                        <rect key="frame" x="8" y="69.5" width="264" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="547-pu-rmO">
+                                        <rect key="frame" x="8" y="314.5" width="264" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0t-vb-oAI">
+                                                <rect key="frame" x="0.0" y="0.0" width="124" height="31"/>
+                                                <state key="normal" title="Zapisz"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Zapisz"/>
+                                                <connections>
+                                                    <action selector="save:" destination="D9o-Z1-bYn" eventType="touchUpInside" id="Ulx-TM-ssW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UR-eg-BZd">
+                                                <rect key="frame" x="140" y="0.0" width="124" height="31"/>
+                                                <state key="normal" title="Anuluj">
+                                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                                </state>
+                                                <buttonConfiguration key="configuration" style="gray" title="Anuluj">
+                                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="cancel:" destination="D9o-Z1-bYn" eventType="touchUpInside" id="oCF-9W-1fG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nazwa zabawy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWI-Rp-8md">
+                                        <rect key="frame" x="8" y="40" width="264" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kategoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Stg-H0-YJe">
+                                        <rect key="frame" x="8" y="110.5" width="264" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fk-Fe-kc6">
+                                        <rect key="frame" x="8" y="139" width="264" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Wybierz kategorię"/>
+                                        <connections>
+                                            <action selector="selectCategoryClicked:" destination="D9o-Z1-bYn" eventType="touchUpInside" id="5bc-1E-FcH"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opis zabawy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7v-2o-hoy">
+                                        <rect key="frame" x="8" y="178" width="264" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="unK-7z-s2i">
+                                        <rect key="frame" x="8" y="206.5" width="264" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="D6I-Wm-bUc"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstItem="LOo-47-huV" firstAttribute="top" secondItem="wWI-Rp-8md" secondAttribute="bottom" constant="8" id="2Er-US-qaS"/>
+                                    <constraint firstItem="547-pu-rmO" firstAttribute="leading" secondItem="pcP-zw-gMn" secondAttribute="leadingMargin" id="4gR-dM-M5y"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="547-pu-rmO" secondAttribute="trailing" id="5oK-JN-eEM"/>
+                                    <constraint firstItem="6fk-Fe-kc6" firstAttribute="leading" secondItem="pcP-zw-gMn" secondAttribute="leading" constant="8" id="9Uc-pC-2GH"/>
+                                    <constraint firstAttribute="trailing" secondItem="LOo-47-huV" secondAttribute="trailing" constant="8" id="ENo-1q-FS6"/>
+                                    <constraint firstItem="547-pu-rmO" firstAttribute="top" secondItem="unK-7z-s2i" secondAttribute="bottom" constant="8" id="EnV-Bh-Ac5"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="547-pu-rmO" secondAttribute="bottom" constant="8" id="GLu-gq-Dxo"/>
+                                    <constraint firstAttribute="trailing" secondItem="unK-7z-s2i" secondAttribute="trailing" constant="8" id="IvH-28-9Zb"/>
+                                    <constraint firstAttribute="trailing" secondItem="Stg-H0-YJe" secondAttribute="trailing" constant="8" id="KbZ-Gs-SlK"/>
+                                    <constraint firstAttribute="trailing" secondItem="W7v-2o-hoy" secondAttribute="trailing" constant="8" id="Le9-d2-13e"/>
+                                    <constraint firstItem="W7v-2o-hoy" firstAttribute="leading" secondItem="pcP-zw-gMn" secondAttribute="leading" constant="8" id="MSY-Om-RbF"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="5km-3n-bRO" secondAttribute="trailing" id="O6M-sf-6i9"/>
+                                    <constraint firstItem="wWI-Rp-8md" firstAttribute="leading" secondItem="pcP-zw-gMn" secondAttribute="leading" constant="8" id="Pyo-Yh-KCl"/>
+                                    <constraint firstItem="unK-7z-s2i" firstAttribute="leading" secondItem="pcP-zw-gMn" secondAttribute="leading" constant="8" id="QiH-MH-34x"/>
+                                    <constraint firstItem="LOo-47-huV" firstAttribute="leading" secondItem="pcP-zw-gMn" secondAttribute="leading" constant="8" id="XQI-wT-Nqp"/>
+                                    <constraint firstItem="5km-3n-bRO" firstAttribute="top" secondItem="pcP-zw-gMn" secondAttribute="topMargin" id="cyn-rF-KRj"/>
+                                    <constraint firstAttribute="trailing" secondItem="wWI-Rp-8md" secondAttribute="trailing" constant="8" id="dzl-02-Kyq"/>
+                                    <constraint firstItem="W7v-2o-hoy" firstAttribute="top" secondItem="6fk-Fe-kc6" secondAttribute="bottom" constant="8" id="f8m-7e-7M9"/>
+                                    <constraint firstAttribute="trailing" secondItem="6fk-Fe-kc6" secondAttribute="trailing" constant="8" id="hIu-JO-lbb"/>
+                                    <constraint firstItem="Stg-H0-YJe" firstAttribute="leading" secondItem="pcP-zw-gMn" secondAttribute="leading" constant="8" id="kH8-kn-jIK"/>
+                                    <constraint firstItem="wWI-Rp-8md" firstAttribute="top" secondItem="5km-3n-bRO" secondAttribute="bottom" constant="8" id="kep-n0-QSS"/>
+                                    <constraint firstAttribute="width" constant="280" id="n6b-LG-W6b"/>
+                                    <constraint firstItem="Stg-H0-YJe" firstAttribute="top" secondItem="LOo-47-huV" secondAttribute="bottom" constant="8" id="qnw-5a-vNN"/>
+                                    <constraint firstItem="6fk-Fe-kc6" firstAttribute="top" secondItem="Stg-H0-YJe" secondAttribute="bottom" constant="8" id="vBI-gQ-A17"/>
+                                    <constraint firstItem="5km-3n-bRO" firstAttribute="leading" secondItem="pcP-zw-gMn" secondAttribute="leadingMargin" id="z2h-66-kri"/>
+                                    <constraint firstItem="unK-7z-s2i" firstAttribute="top" secondItem="W7v-2o-hoy" secondAttribute="bottom" constant="8" id="zrE-YE-eB9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lYp-I5-i66"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.2286226455479452" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pcP-zw-gMn" firstAttribute="centerY" secondItem="B1x-qt-chR" secondAttribute="centerY" id="QqX-V8-7jM"/>
+                            <constraint firstItem="pcP-zw-gMn" firstAttribute="centerX" secondItem="B1x-qt-chR" secondAttribute="centerX" id="dFX-s3-Zs2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionField" destination="unK-7z-s2i" id="IO5-GY-CWx"/>
+                        <outlet property="dropdownButton" destination="6fk-Fe-kc6" id="jcZ-4O-GPB"/>
+                        <outlet property="gameNameField" destination="LOo-47-huV" id="mOh-xi-okM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZz-4O-3ya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234.78260869565219" y="140.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
