@@ -284,6 +284,73 @@ class DatabaseFavorites
         sqlite3_finalize(statement)
     }
     
+    //swap game with game which have higher number
+    public func swapGames(name:String, sourceGame: String, sourceIndex: Int, destinationIndex: Int)
+    {
+        var statement: OpaquePointer?
+        
+        if sourceIndex > destinationIndex
+        {
+            if sqlite3_prepare_v2(db, "UPDATE \(tableName) SET number = number + 1 WHERE name = '\(name)' AND number >= \(destinationIndex) AND number < \(sourceIndex)", -1, &statement, nil) == SQLITE_OK
+            {
+                if sqlite3_step(statement) == SQLITE_DONE
+                {
+                    print("DONE")
+                }
+            }
+            else
+            {
+                let errmsg = String(cString:sqlite3_errmsg(db)!)
+                print("error preparing select: \(errmsg)")
+            }
+            sqlite3_finalize(statement)
+            
+            if sqlite3_prepare_v2(db, "UPDATE \(tableName) SET number = \(destinationIndex) WHERE name = '\(name)' AND number = \(sourceIndex) AND game = '\(sourceGame)'", -1, &statement, nil) == SQLITE_OK
+            {
+                if sqlite3_step(statement) == SQLITE_DONE
+                {
+                    print("DONE")
+                }
+            }
+            else
+            {
+                let errmsg = String(cString:sqlite3_errmsg(db)!)
+                print("error preparing select: \(errmsg)")
+            }
+            sqlite3_finalize(statement)
+        }
+        else
+        {
+            if sqlite3_prepare_v2(db, "UPDATE \(tableName) SET number = number - 1 WHERE name = '\(name)' AND number <= \(destinationIndex) AND number > \(sourceIndex)", -1, &statement, nil) == SQLITE_OK
+            {
+                if sqlite3_step(statement) == SQLITE_DONE
+                {
+                    print("DONE")
+                }
+            }
+            else
+            {
+                let errmsg = String(cString:sqlite3_errmsg(db)!)
+                print("error preparing select: \(errmsg)")
+            }
+            sqlite3_finalize(statement)
+            
+            if sqlite3_prepare_v2(db, "UPDATE \(tableName) SET number = \(destinationIndex) WHERE name = '\(name)' AND number = \(sourceIndex) AND game = '\(sourceGame)'", -1, &statement, nil) == SQLITE_OK
+            {
+                if sqlite3_step(statement) == SQLITE_DONE
+                {
+                    print("DONE")
+                }
+            }
+            else
+            {
+                let errmsg = String(cString:sqlite3_errmsg(db)!)
+                print("error preparing select: \(errmsg)")
+            }
+            sqlite3_finalize(statement)
+        }
+    }
+    
     //create empty list of favorite
     public func createFavorites(name:String, game:String?)
     {
@@ -438,7 +505,7 @@ class DatabaseFavorites
         
         let number = numberOfGame(name: name, game: game)
         
-        if sqlite3_prepare_v2(db, "UPDATE \(tableName) SET number = number - 1 WHERE name = '\(name) AND number > \(number)", -1, &statement, nil) == SQLITE_OK
+        if sqlite3_prepare_v2(db, "UPDATE \(tableName) SET number = number - 1 WHERE name = '\(name)' AND number > \(number)", -1, &statement, nil) == SQLITE_OK
         {
             if sqlite3_step(statement) == SQLITE_DONE
             {

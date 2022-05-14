@@ -19,23 +19,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var perceptivityButton: UIButton!
     @IBOutlet weak var efficiencyButton: UIButton!
     
-    @IBOutlet weak var wholeListButton: UIButton!
-    
     let sService:SettingsService = SettingsService()
     
     var label:UILabel!
     
-//    func centerVertically(padding: CGFloat = 18.0) {
-//        // No point in doing anything if we don't have an imageView size
-//        guard let imageFrame = integrationButton.imageView?.frame else { return }
-//        integrationButton.titleLabel?.numberOfLines = 0
-//        integrationButton.titleEdgeInsets.left = -(imageFrame.width + padding)
-//        integrationButton.titleEdgeInsets.top = (imageFrame.height + padding)
-//        integrationButton.imageView?.bounds.insetBy(dx: 0.5, dy: 0.5)
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.shared.statusBarStyle = .lightContent
 //        centerVertically()
         
 //        perceptivityButton.contentVerticalAlignment = .fill
@@ -46,8 +36,9 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        
         if #available(iOS 13.0, *) {
-            self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+//            self.navigationController?.navigationBar.barStyle = UIBarStyle.black
             
             let appearance = UINavigationBarAppearance()
             appearance.configureWithOpaqueBackground()
@@ -57,7 +48,7 @@ class ViewController: UIViewController {
             self.navigationController?.navigationBar.scrollEdgeAppearance = self.navigationController?.navigationBar.standardAppearance
             self.navigationController?.navigationBar.tintColor = UIColor.white
         } else {
-            self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+//            self.navigationController?.navigationBar.barStyle = UIBarStyle.black
             self.navigationController?.navigationBar.tintColor = UIColor.white
             self.navigationController?.navigationBar.barTintColor = UIColor.red
             self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
@@ -118,8 +109,6 @@ class ViewController: UIViewController {
             message = "refleks"
         case efficiencyButton:
             message = "sprawnościowe"
-        case wholeListButton:
-            message = "all"
         default:
             message = "really error"
         }

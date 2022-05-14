@@ -39,7 +39,7 @@ class ListController: UIViewController, UITableViewDataSource, UITableViewDelega
         {
             title = String(txt.prefix(1)).capitalized + String(txt.dropFirst())
         }
-        print(self.navigationController?.viewControllers.count)
+        
         if (self.navigationController?.viewControllers.count)! >= 2
         {
             guard let navigationController = self.navigationController else { return }
@@ -51,6 +51,8 @@ class ListController: UIViewController, UITableViewDataSource, UITableViewDelega
             navigationArray.append(temp2!) //To remove all previous UIViewController except the last one
             self.navigationController?.viewControllers = navigationArray
         }
+        
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -130,7 +130,6 @@ class SettingsController: UIViewController, MFMailComposeViewControllerDelegate 
     }
     
     @IBAction func allGamesClicked(_ sender: Any) {
-        print((self.navigationController?.viewControllers.count)!)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

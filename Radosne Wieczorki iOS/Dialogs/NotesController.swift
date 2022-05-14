@@ -16,7 +16,7 @@ class NotesController: UIViewController {
     var parentController: UIViewController?
     var databaseFavorites = DatabaseFavorites()
     
-    @IBOutlet weak var notesField: UITextField!
+    @IBOutlet weak var notesField: UITextView!
     
     var buttonAction: (() -> Void)?
     

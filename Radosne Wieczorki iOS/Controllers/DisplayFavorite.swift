@@ -13,6 +13,7 @@ import UniformTypeIdentifiers
 class DisplayFavorite: UIViewController, UIDocumentPickerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var editButton: UIButton!
     
     var favoriteName:String = ""
     
@@ -52,9 +53,6 @@ class DisplayFavorite: UIViewController, UIDocumentPickerDelegate {
     
     @IBAction func exportClicker(_ sender: Any) {
         JSONString = databaseFavorites.getJSON(favoriteListName: favoriteName)
-        let filePath = NSHomeDirectory() + "/Documents/test.json"
-//        print("export")
-//        print(filePath)
         
         let documentPicker =
             UIDocumentPickerViewController(forOpeningContentTypes: [.folder])
@@ -93,6 +91,20 @@ class DisplayFavorite: UIViewController, UIDocumentPickerDelegate {
             Toast.showToast(message: "Eksport listy zakończył się niepowodzeniem", controller: self)
         }
     }
+    
+    @IBAction func editClicked(_ sender: Any) {
+        if tableView.isEditing
+        {
+            self.tableView.setEditing(false, animated: true)
+            editButton.setImage(UIImage(systemName: "pencil"), for: .normal)
+        }
+        else
+        {
+            self.tableView.setEditing(true, animated: true)
+            editButton.setImage(UIImage(systemName: "checkmark"), for: .normal)
+        }
+    }
+    
 }
 
 extension DisplayFavorite: UITableViewDelegate, UITableViewDataSource
@@ -135,6 +147,24 @@ extension DisplayFavorite: UITableViewDelegate, UITableViewDataSource
         maskLayer.backgroundColor = UIColor.black.cgColor
         maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 0, dy: verticalPadding/2)
         cell.layer.mask = maskLayer
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+        databaseFavorites.swapGames(name: favoriteName, sourceGame: list[sourceIndexPath.row], sourceIndex: sourceIndexPath.row + 1, destinationIndex: destinationIndexPath.row + 1)
+        
+        list.swapAt(sourceIndexPath.row, destinationIndexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let gameName = databaseFavorites.gameFromNumber(number: indexPath.row + 1, name: favoriteName)
+        databaseFavorites.deleteGame(name: favoriteName, game: gameName)
+        list.remove(at: indexPath.row)
+        tableView.reloadData()
     }
     
     override func prepare(for segue:UIStoryboardSegue, sender: Any?)
