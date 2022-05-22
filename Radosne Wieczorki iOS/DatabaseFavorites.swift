@@ -291,7 +291,8 @@ class DatabaseFavorites
         
         if sourceIndex > destinationIndex
         {
-            if sqlite3_prepare_v2(db, "UPDATE \(tableName) SET number = number + 1 WHERE name = '\(name)' AND number >= \(destinationIndex) AND number < \(sourceIndex)", -1, &statement, nil) == SQLITE_OK
+            let query = "UPDATE \(tableName) SET number = number + 1 WHERE name = '\(name)' AND number >= \(destinationIndex) AND number < \(sourceIndex)"
+            if sqlite3_prepare_v2(db, query, -1, &statement, nil) == SQLITE_OK
             {
                 if sqlite3_step(statement) == SQLITE_DONE
                 {
@@ -305,7 +306,8 @@ class DatabaseFavorites
             }
             sqlite3_finalize(statement)
             
-            if sqlite3_prepare_v2(db, "UPDATE \(tableName) SET number = \(destinationIndex) WHERE name = '\(name)' AND number = \(sourceIndex) AND game = '\(sourceGame)'", -1, &statement, nil) == SQLITE_OK
+            let query2 = "UPDATE \(tableName) SET number = \(destinationIndex) WHERE name = '\(name)' AND number = \(sourceIndex) AND game = '\(sourceGame)'"
+            if sqlite3_prepare_v2(db, query2, -1, &statement, nil) == SQLITE_OK
             {
                 if sqlite3_step(statement) == SQLITE_DONE
                 {
@@ -321,7 +323,8 @@ class DatabaseFavorites
         }
         else
         {
-            if sqlite3_prepare_v2(db, "UPDATE \(tableName) SET number = number - 1 WHERE name = '\(name)' AND number <= \(destinationIndex) AND number > \(sourceIndex)", -1, &statement, nil) == SQLITE_OK
+            let query = "UPDATE \(tableName) SET number = number - 1 WHERE name = '\(name)' AND number <= \(destinationIndex) AND number > \(sourceIndex)"
+            if sqlite3_prepare_v2(db, query, -1, &statement, nil) == SQLITE_OK
             {
                 if sqlite3_step(statement) == SQLITE_DONE
                 {
@@ -335,7 +338,8 @@ class DatabaseFavorites
             }
             sqlite3_finalize(statement)
             
-            if sqlite3_prepare_v2(db, "UPDATE \(tableName) SET number = \(destinationIndex) WHERE name = '\(name)' AND number = \(sourceIndex) AND game = '\(sourceGame)'", -1, &statement, nil) == SQLITE_OK
+            let query2 = "UPDATE \(tableName) SET number = \(destinationIndex) WHERE name = '\(name)' AND number = \(sourceIndex) AND game = '\(sourceGame)'"
+            if sqlite3_prepare_v2(db, query2, -1, &statement, nil) == SQLITE_OK
             {
                 if sqlite3_step(statement) == SQLITE_DONE
                 {

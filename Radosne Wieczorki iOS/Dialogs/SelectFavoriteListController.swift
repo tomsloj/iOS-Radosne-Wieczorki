@@ -55,11 +55,19 @@ class SelectFavoriteListController: UIViewController
         {
             if(gameName != nil)
             {
-                databaseFavorites.addGametoFavorite(name: listName!, game: gameName!)
-                Toast.showToast(message: "Dodano zabawę do listy " + listName, controller: parentController!)
+                if databaseFavorites.gameInFavoriteExists(name: listName, game: gameName!)
+                {
+                    Toast.showToast(message: "Zabawa już znajduje się na liście", controller: self)
+                }
+                else
+                {
+                    databaseFavorites.addGametoFavorite(name: listName!, game: gameName!)
+                    Toast.showToast(message: "Dodano zabawę do listy " + listName, controller: parentController!)
+                    dismiss(animated: true)
+                    buttonAction?()
+                }
             }
-            dismiss(animated: true)
-            buttonAction?()
+            
         }
     }
     @IBAction func createNewList(_ sender: Any) {
@@ -81,6 +89,7 @@ class SelectFavoriteListController: UIViewController
             else
             {
                 databaseFavorites.createFavorites(name: name!, game: gameName)
+                Toast.showToast(message: "Stworzono nową listę", controller: parentController)
                 dismiss(animated: true)
                 buttonAction?()
             }

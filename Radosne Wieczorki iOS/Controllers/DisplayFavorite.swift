@@ -157,7 +157,8 @@ extension DisplayFavorite: UITableViewDelegate, UITableViewDataSource
         
         databaseFavorites.swapGames(name: favoriteName, sourceGame: list[sourceIndexPath.row], sourceIndex: sourceIndexPath.row + 1, destinationIndex: destinationIndexPath.row + 1)
         
-        list.swapAt(sourceIndexPath.row, destinationIndexPath.row)
+        let element = list.remove(at: sourceIndexPath.row)
+        list.insert(element, at: destinationIndexPath.row)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
