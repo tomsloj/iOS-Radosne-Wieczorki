@@ -8,8 +8,9 @@
 
 import UIKit
 import Dropper
+import MessageUI
 
-class NewGameController: UIViewController {
+class NewGameController: UIViewController, MFMailComposeViewControllerDelegate {
     
     var gameName: String?
     var categoryName: String?
@@ -76,12 +77,55 @@ class NewGameController: UIViewController {
         }
     }
     
+    @IBAction func saveAndShare(_ sender: Any) {
+        gameName = gameNameField.text
+        gameDescription = descriptionField.text
+        
+        if gameName == nil || gameName == ""
+        {
+            Toast.showToast(message: "Podaj nazwę zabawy", controller: self)
+        }
+        else if categoryName == nil || categoryName == ""
+        {
+            Toast.showToast(message: "Wybierz kategorię", controller: self)
+        }
+        else
+        {
+            let ret = databaseHelper.addGame(category: categoryName!, game: gameName!, text: gameDescription!)
+            
+            if ret
+            {
+                Toast.showToast(message: "Zabawa została dodana", controller: parentController ?? self)
+                let mailComposeViewController = configureMailComposer(gameName: gameName ?? "", category: categoryName ?? "", description: gameDescription ?? "")
+                    if MFMailComposeViewController.canSendMail(){
+                        self.present(mailComposeViewController, animated: true, completion: nil)
+                    }else{
+                        Toast.showToast(message: "Nie można wysłać maila", controller: self)
+                    }
+            }
+            else
+            {
+                Toast.showToast(message: "Dodawanie zabawy zakończone niepowodzeniem", controller: parentController ?? self)
+            }
+            
+            dismiss(animated: true)
+            buttonAction?()
+        }
+    }
+    
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true)
         buttonAction?()
     }
     
-    
+    func configureMailComposer(gameName: String, category: String, description: String) -> MFMailComposeViewController{
+        let mailComposeVC = MFMailComposeViewController()
+        mailComposeVC.mailComposeDelegate = self
+        mailComposeVC.setToRecipients(["300268@pw.edu.pl"])
+        mailComposeVC.setSubject("Radosne Wieczorki - nowa zabawa")
+        mailComposeVC.setMessageBody(gameName + "\n" + category + "\n" + description + "\n", isHTML: false)
+        return mailComposeVC
+    }
 }
 
 extension NewGameController: DropperDelegate {

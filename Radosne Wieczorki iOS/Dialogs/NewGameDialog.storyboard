@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D9o-Z1-bYn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D9o-Z1-bYn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcP-zw-gMn">
-                                <rect key="frame" x="67" y="267.5" width="280" height="361.5"/>
+                                <rect key="frame" x="52" y="262" width="310" height="372.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dodawanie zabawy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5km-3n-bRO">
-                                        <rect key="frame" x="8" y="8" width="264" height="24"/>
+                                        <rect key="frame" x="8" y="8" width="294" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -31,23 +31,57 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="547-pu-rmO">
-                                        <rect key="frame" x="8" y="314.5" width="264" height="31"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="547-pu-rmO">
+                                        <rect key="frame" x="8" y="314.5" width="294" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0t-vb-oAI">
-                                                <rect key="frame" x="0.0" y="0.0" width="124" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="92.5" height="42"/>
                                                 <state key="normal" title="Zapisz"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Zapisz"/>
+                                                <buttonConfiguration key="configuration" style="gray">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Zapisz lokalnie">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="save:" destination="D9o-Z1-bYn" eventType="touchUpInside" id="Ulx-TM-ssW"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IL-hT-nRQ">
+                                                <rect key="frame" x="100.5" y="0.0" width="93" height="42"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Zapisz i udostępnij">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="saveAndShare:" destination="D9o-Z1-bYn" eventType="touchUpInside" id="afl-3S-7Sj"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UR-eg-BZd">
-                                                <rect key="frame" x="140" y="0.0" width="124" height="31"/>
+                                                <rect key="frame" x="201.5" y="0.0" width="92.5" height="42"/>
                                                 <state key="normal" title="Anuluj">
                                                     <color key="titleColor" systemColor="systemRedColor"/>
                                                 </state>
-                                                <buttonConfiguration key="configuration" style="gray" title="Anuluj">
+                                                <buttonConfiguration key="configuration" style="gray">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Anuluj">
+                                                            <attributes>
+                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -57,19 +91,19 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nazwa zabawy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWI-Rp-8md">
-                                        <rect key="frame" x="8" y="40" width="264" height="20.5"/>
+                                        <rect key="frame" x="8" y="40" width="294" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kategoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Stg-H0-YJe">
-                                        <rect key="frame" x="8" y="110.5" width="264" height="20.5"/>
+                                        <rect key="frame" x="8" y="110.5" width="294" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fk-Fe-kc6">
-                                        <rect key="frame" x="8" y="139" width="264" height="31"/>
+                                        <rect key="frame" x="8" y="139" width="294" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Wybierz kategorię"/>
                                         <connections>
@@ -77,13 +111,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opis zabawy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7v-2o-hoy">
-                                        <rect key="frame" x="8" y="178" width="264" height="20.5"/>
+                                        <rect key="frame" x="8" y="178" width="294" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="unK-7z-s2i">
-                                        <rect key="frame" x="8" y="206.5" width="264" height="100"/>
+                                        <rect key="frame" x="8" y="206.5" width="294" height="100"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="D6I-Wm-bUc"/>
@@ -116,7 +150,7 @@
                                     <constraint firstAttribute="trailing" secondItem="6fk-Fe-kc6" secondAttribute="trailing" constant="8" id="hIu-JO-lbb"/>
                                     <constraint firstItem="Stg-H0-YJe" firstAttribute="leading" secondItem="pcP-zw-gMn" secondAttribute="leading" constant="8" id="kH8-kn-jIK"/>
                                     <constraint firstItem="wWI-Rp-8md" firstAttribute="top" secondItem="5km-3n-bRO" secondAttribute="bottom" constant="8" id="kep-n0-QSS"/>
-                                    <constraint firstAttribute="width" constant="280" id="n6b-LG-W6b"/>
+                                    <constraint firstAttribute="width" constant="310" id="n6b-LG-W6b"/>
                                     <constraint firstItem="Stg-H0-YJe" firstAttribute="top" secondItem="LOo-47-huV" secondAttribute="bottom" constant="8" id="qnw-5a-vNN"/>
                                     <constraint firstItem="6fk-Fe-kc6" firstAttribute="top" secondItem="Stg-H0-YJe" secondAttribute="bottom" constant="8" id="vBI-gQ-A17"/>
                                     <constraint firstItem="5km-3n-bRO" firstAttribute="leading" secondItem="pcP-zw-gMn" secondAttribute="leadingMargin" id="z2h-66-kri"/>

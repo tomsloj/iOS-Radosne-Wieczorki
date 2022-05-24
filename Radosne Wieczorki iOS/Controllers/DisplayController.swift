@@ -121,6 +121,7 @@ class DisplayController: UIViewController {
             {
                 gameName = prevGame
                 titleLabel.text = gameName
+                categoryLabel.text = "Kategoria: " +  databaseHelper.getCategory(game: gameName ?? "")
                 textLabel.text = databaseHelper.getText(game: gameName ?? "")
                 if databaseHelper.nextGame(category: categoryName!, game: gameName ?? "").isEmpty
                 {
@@ -147,7 +148,7 @@ class DisplayController: UIViewController {
             {
                 gameName = databaseFavorite.gameFromNumber(number: gameNumber - 1, name: categoryName!)
                 titleLabel.text = gameName
-                categoryLabel.text = databaseHelper.getCategory(game: gameName ?? "")
+                categoryLabel.text = "Kategoria: " +  databaseHelper.getCategory(game: gameName ?? "")
                 textLabel.text = databaseHelper.getText(game: gameName ?? "")
                 updateLeftRightButtons()
             }
@@ -175,6 +176,7 @@ class DisplayController: UIViewController {
             {
                 gameName = nextGame
                 titleLabel.text = gameName
+                categoryLabel.text = "Kategoria: " +  databaseHelper.getCategory(game: gameName ?? "")
                 textLabel.text = databaseHelper.getText(game: gameName ?? "")
                 if databaseHelper.prevGame(category: categoryName!, game: gameName ?? "").isEmpty
                 {
@@ -202,7 +204,7 @@ class DisplayController: UIViewController {
             {
                 gameName = databaseFavorite.gameFromNumber(number: gameNumber + 1, name: categoryName!)
                 titleLabel.text = gameName
-                categoryLabel.text = databaseHelper.getCategory(game: gameName ?? "")
+                categoryLabel.text = "Kategoria: " +  databaseHelper.getCategory(game: gameName ?? "")
                 textLabel.text = databaseHelper.getText(game: gameName ?? "")
                 updateLeftRightButtons()
             }
